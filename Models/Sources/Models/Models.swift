@@ -15,7 +15,7 @@ public struct EntriesSection: Codable, Identifiable, Equatable {
     public let entries: [Entry]
 }
 
-public struct Entry: Codable, Identifiable, Equatable {
+public struct Entry: Codable, Identifiable, Equatable, Hashable {
     //swiftlint:disable identifier_name
     public let id: String?
     public let title: String
@@ -48,6 +48,12 @@ public struct Entry: Codable, Identifiable, Equatable {
         self.location = location
         self.weather = weather
         self.tags = tags
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+        hasher.combine(id)
+        hasher.combine(body)
     }
 
     public var bodyText: String {
