@@ -35,7 +35,7 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
 
         return enviornment
             .service
-            .update(entry, state.title)
+            .update(entry: entry, title: state.title)
         .catchToEffect()
         .map { _ in
             return .updated
