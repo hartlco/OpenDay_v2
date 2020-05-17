@@ -23,6 +23,10 @@
 		C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DA24690ABA0009886C /* EntriesListReducer.swift */; };
 		C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DC24690C4C0009886C /* EntriesListView.swift */; };
 		C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DE24690F220009886C /* OpenDayService+Effect.swift */; };
+		C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
+		C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
+		C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
+		C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D352471D2A90058FE07 /* EntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +60,10 @@
 		C50B22DA24690ABA0009886C /* EntriesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListReducer.swift; sourceTree = "<group>"; };
 		C50B22DC24690C4C0009886C /* EntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListView.swift; sourceTree = "<group>"; };
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
+		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
+		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
+		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
+		C56E3D352471D2A90058FE07 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		C50B22B12469074B0009886C /* OpenDay-v2 */ = {
 			isa = PBXGroup;
 			children = (
+				C56E3D2E2471D00B0058FE07 /* Entry */,
 				C50B22D3246909060009886C /* EntriesList */,
 				C50B22B22469074B0009886C /* AppDelegate.swift */,
 				C50B22B42469074B0009886C /* SceneDelegate.swift */,
@@ -132,6 +141,17 @@
 				C50B22DE24690F220009886C /* OpenDayService+Effect.swift */,
 			);
 			path = EntriesList;
+			sourceTree = "<group>";
+		};
+		C56E3D2E2471D00B0058FE07 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				C56E3D2F2471D02D0058FE07 /* EntryState.swift */,
+				C56E3D312471D0CF0058FE07 /* EntryAction.swift */,
+				C56E3D332471D2630058FE07 /* EntryReducer.swift */,
+				C56E3D352471D2A90058FE07 /* EntryView.swift */,
+			);
+			path = Entry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,13 +235,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50B22D52469092F0009886C /* EntriesListState.swift in Sources */,
+				C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */,
+				C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */,
 				C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */,
 				C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */,
 				C50B22B32469074B0009886C /* AppDelegate.swift in Sources */,
+				C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */,
 				C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */,
 				C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */,
 				C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */,
 				C50B22B72469074B0009886C /* ContentView.swift in Sources */,
+				C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */,
 				C50B22D7246909E90009886C /* EntriesListAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
