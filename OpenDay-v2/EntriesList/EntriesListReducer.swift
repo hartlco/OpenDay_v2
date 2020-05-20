@@ -28,7 +28,8 @@ EntriesListEnviornment>.combine(
             case .setNavigation(let entry):
                 if let newEntry = entry {
                     let entryState = EntryState(entry: entry,
-                                                title: newEntry.title)
+                                                title: newEntry.title,
+                                                currentLocation: entry?.location)
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil
@@ -47,7 +48,8 @@ EntriesListEnviornment>.combine(
             action: /EntriesListAction.entry,
             environment: { enviornment in
                 EntryEnviornment(service: enviornment.service,
-                                 mainQueue: enviornment.mainQueue)
+                                 mainQueue: enviornment.mainQueue,
+                                 locationService: enviornment.locationServcie)
         }
     )
 )

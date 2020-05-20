@@ -9,13 +9,15 @@ extension OpenDayService {
         return Effect<[EntriesSection], Error>(perform(endpoint: .entries))
     }
 
-    func update(entry: Entry, title: String) -> Effect<String, Error> {
+    func update(entry: Entry,
+                title: String?,
+                location: Location?) -> Effect<String, Error> {
         let newEntry = Entry(id: entry.id,
-                             title: title,
+                             title: title ?? entry.title,
                              bodyText: entry.bodyText,
                              date: entry.date,
                              images: entry.images,
-                             location: entry.location,
+                             location: location ?? entry.location,
                              weather: entry.weather,
                              tags: entry.tags)
         let future: Future<String, Error> = self.perform(endpoint: .updateEntry(newEntry))

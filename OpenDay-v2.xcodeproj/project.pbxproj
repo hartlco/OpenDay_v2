@@ -23,6 +23,8 @@
 		C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DA24690ABA0009886C /* EntriesListReducer.swift */; };
 		C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DC24690C4C0009886C /* EntriesListView.swift */; };
 		C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DE24690F220009886C /* OpenDayService+Effect.swift */; };
+		C51E535E247510D600AE653A /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = C51E535D247510D600AE653A /* LocationService */; };
+		C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51E535F2475110B00AE653A /* EntryEnviornment.swift */; };
 		C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
 		C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
 		C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
@@ -60,6 +62,8 @@
 		C50B22DA24690ABA0009886C /* EntriesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListReducer.swift; sourceTree = "<group>"; };
 		C50B22DC24690C4C0009886C /* EntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListView.swift; sourceTree = "<group>"; };
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
+		C51E535C2475109400AE653A /* LocationService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LocationService; sourceTree = "<group>"; };
+		C51E535F2475110B00AE653A /* EntryEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEnviornment.swift; sourceTree = "<group>"; };
 		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
 		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
 		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50B22D0246908F10009886C /* Models in Frameworks */,
+				C51E535E247510D600AE653A /* LocationService in Frameworks */,
 				C50B22C82469077C0009886C /* ComposableArchitecture in Frameworks */,
 				C50B22D2246908F10009886C /* OpenDayService in Frameworks */,
 			);
@@ -83,6 +88,7 @@
 		C50B22A62469074B0009886C = {
 			isa = PBXGroup;
 			children = (
+				C51E535C2475109400AE653A /* LocationService */,
 				C50B22CD246908E30009886C /* OpenDayService */,
 				C50B22CC246908DE0009886C /* Models */,
 				C50B22B12469074B0009886C /* OpenDay-v2 */,
@@ -150,6 +156,7 @@
 				C56E3D312471D0CF0058FE07 /* EntryAction.swift */,
 				C56E3D332471D2630058FE07 /* EntryReducer.swift */,
 				C56E3D352471D2A90058FE07 /* EntryView.swift */,
+				C51E535F2475110B00AE653A /* EntryEnviornment.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				C50B22C72469077C0009886C /* ComposableArchitecture */,
 				C50B22CF246908F10009886C /* Models */,
 				C50B22D1246908F10009886C /* OpenDayService */,
+				C51E535D247510D600AE653A /* LocationService */,
 			);
 			productName = "OpenDay-v2";
 			productReference = C50B22AF2469074B0009886C /* OpenDay-v2.app */;
@@ -234,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */,
 				C50B22D52469092F0009886C /* EntriesListState.swift in Sources */,
 				C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */,
 				C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */,
@@ -444,8 +453,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.2;
+				kind = exactVersion;
+				version = 0.1.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -463,6 +472,10 @@
 		C50B22D1246908F10009886C /* OpenDayService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OpenDayService;
+		};
+		C51E535D247510D600AE653A /* LocationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocationService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

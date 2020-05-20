@@ -7,7 +7,7 @@ struct EntryView: View {
 
     var body: some View {
         WithViewStore(store) { viewStore in
-            VStack {
+            List {
                 TextField(
                   "Title",
                   text: viewStore.binding(get: { $0.title },
@@ -18,7 +18,18 @@ struct EntryView: View {
                 }) {
                     Text("Update")
                 }
+                Section {
+                    viewStore.currentLocation.map {
+                        Text($0.city ?? "")
+                    }
+                    Button(action: {
+                        viewStore.send(EntryAction.loadLocation)
+                    }, label: {
+                        Text("Load current location")
+                    })
+                }
             }
+            .listStyle(GroupedListStyle())
         }
     }
 }

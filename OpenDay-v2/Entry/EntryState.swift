@@ -7,4 +7,5 @@ struct EntryState: Equatable {
 
     var title: String
     var body: String?
+    var currentLocation: Location?
 }

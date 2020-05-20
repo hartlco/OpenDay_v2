@@ -7,7 +7,6 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
         return .none
     case .updateTitle(let text):
         state.title = text
-        print("Updated title")
         return .none
     case .updateEntryIfNeeded:
         guard let entry = state.entry else {
@@ -16,11 +15,28 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
 
         return enviornment
             .service
-            .update(entry: entry, title: state.title)
+            .update(entry: entry,
+                    title: state.title,
+                    location: state.currentLocation)
         .catchToEffect()
         .map { _ in
             return .updated
         }
+    case .loadLocation:
+        return enviornment.locationService
+            .getLocation()
+            .receive(on: enviornment.mainQueue)
+            .catchToEffect()
+            .map(EntryAction.currentLocationChanged)
+    case .currentLocationChanged(let result):
+        switch result {
+        case .success(let location):
+            state.currentLocation = location
+        case .failure:
+            state.currentLocation = nil
+        }
+
+        return .none
     }
 }
 

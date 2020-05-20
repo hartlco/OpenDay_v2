@@ -2,6 +2,7 @@ import UIKit
 import SwiftUI
 import OpenDayService
 import ComposableArchitecture
+import LocationService
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -9,9 +10,14 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let baseURL = URL(string: "http://192.168.10.50:8000")!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        let locationService = LocationService(locationManager: .init())
+        let openDayService = OpenDayService(baseURL: baseURL,
+                                            client: URLSession.shared)
+        let queue = DispatchQueue.main.eraseToAnyScheduler()
 
-        let enviornment = EntriesListEnviornment(service: OpenDayService(baseURL: baseURL, client: URLSession.shared),
-                                                 mainQueue: DispatchQueue.main.eraseToAnyScheduler())
+        let enviornment = EntriesListEnviornment(service: openDayService,
+                                                 mainQueue: queue,
+                                                 locationServcie: locationService)
 
         let contentView = EntriesListView(store: Store(initialState: EntriesListState(sections: []),
                                                        reducer: entriesListReducer.debug(),

@@ -1,10 +1,10 @@
 import Foundation
-import ComposableArchitecture
 import OpenDayService
+import ComposableArchitecture
 import LocationService
 
-struct EntriesListEnviornment {
+struct EntryEnviornment {
     var service: OpenDayService
     var mainQueue: AnySchedulerOf<DispatchQueue>
-    var locationServcie: LocationService
+    var locationService: LocationService
 }

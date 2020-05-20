@@ -26,7 +26,7 @@ struct EntriesListView: View {
                                     send: EntriesListAction.setNavigation(selection:)
                                   )
                                 ) {
-                                    Text(entry.title)
+                                    EntryListRow(entry: entry)
                                 }
                             }
                         }
@@ -38,5 +38,13 @@ struct EntriesListView: View {
             }
             .navigationBarTitle("Entries")
         }
+    }
+}
+
+struct EntryListRow: View {
+    let entry: Entry
+
+    var body: some View {
+        Text(entry.title)
     }
 }
