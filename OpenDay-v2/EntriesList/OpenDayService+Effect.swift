@@ -11,11 +11,13 @@ extension OpenDayService {
 
     func update(entry: Entry,
                 title: String?,
+                body: String?,
+                date: Date?,
                 location: Location?) -> Effect<String, Error> {
         let newEntry = Entry(id: entry.id,
                              title: title ?? entry.title,
-                             bodyText: entry.bodyText,
-                             date: entry.date,
+                             bodyText: body ?? entry.bodyText,
+                             date: date ?? entry.date,
                              images: entry.images,
                              location: location ?? entry.location,
                              weather: entry.weather,

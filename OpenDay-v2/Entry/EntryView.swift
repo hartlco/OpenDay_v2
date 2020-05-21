@@ -19,9 +19,23 @@ struct EntryView: View {
                     )
                     ExpandingTextView(placeholder: "Body",
                                       text: viewStore.binding(get: { $0.body },
-                                      send: EntryAction.updateBody(text:)),
+                                                              send: EntryAction.updateBody(text:)),
                                       minHeight: self.bodyHeight,
                                       calculatedHeight: self.$bodyHeight)
+                }
+                Section(header: Text("Date")) {
+                    DatePicker(selection: viewStore.binding(get: { $0.date },
+                                                            send: EntryAction.updateDate(date:)),
+                               in: Date(timeIntervalSince1970: 0)...,
+                               displayedComponents: .date) {
+                                Text("Date")
+                    }
+                    DatePicker(selection: viewStore.binding(get: { $0.date },
+                                                            send: EntryAction.updateDate(date:)),
+                               in: Date(timeIntervalSince1970: 0)...,
+                               displayedComponents: .hourAndMinute) {
+                                Text("Time")
+                    }
                 }
                 Section {
                     Button(action: {

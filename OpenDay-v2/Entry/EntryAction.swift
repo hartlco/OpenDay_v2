@@ -5,6 +5,7 @@ import Models
 enum EntryAction {
     case updateTitle(text: String)
     case updateBody(text: String)
+    case updateDate(date: Date)
     case loadLocation
     case updateEntryIfNeeded
     case updated

@@ -20,6 +20,8 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
             .service
             .update(entry: entry,
                     title: state.title,
+                    body: state.body,
+                    date: state.date,
                     location: state.currentLocation)
         .catchToEffect()
         .map { _ in
@@ -39,6 +41,9 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
             state.currentLocation = nil
         }
 
+        return .none
+    case .updateDate(let date):
+        state.date = date
         return .none
     }
 }
