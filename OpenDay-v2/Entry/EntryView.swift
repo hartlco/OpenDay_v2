@@ -42,6 +42,7 @@ struct EntryView: View {
                 }
             }
             .listStyle(GroupedListStyle())
+            .navigationBarTitle("Entry")
         }
     }
 }

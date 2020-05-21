@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C50B22B32469074B0009886C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22B22469074B0009886C /* AppDelegate.swift */; };
 		C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22B42469074B0009886C /* SceneDelegate.swift */; };
-		C50B22B72469074B0009886C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22B62469074B0009886C /* ContentView.swift */; };
 		C50B22B92469074C0009886C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22B82469074C0009886C /* Assets.xcassets */; };
 		C50B22BC2469074C0009886C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BB2469074C0009886C /* Preview Assets.xcassets */; };
 		C50B22BF2469074C0009886C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BD2469074C0009886C /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 		C50B22AF2469074B0009886C /* OpenDay-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenDay-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50B22B22469074B0009886C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C50B22B42469074B0009886C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C50B22B62469074B0009886C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C50B22B82469074C0009886C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50B22BB2469074C0009886C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C50B22BE2469074C0009886C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				C50B22D3246909060009886C /* EntriesList */,
 				C50B22B22469074B0009886C /* AppDelegate.swift */,
 				C50B22B42469074B0009886C /* SceneDelegate.swift */,
-				C50B22B62469074B0009886C /* ContentView.swift */,
 				C50B22B82469074C0009886C /* Assets.xcassets */,
 				C50B22BD2469074C0009886C /* LaunchScreen.storyboard */,
 				C50B22C02469074C0009886C /* Info.plist */,
@@ -256,7 +253,6 @@
 				C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */,
 				C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */,
 				C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */,
-				C50B22B72469074B0009886C /* ContentView.swift in Sources */,
 				C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */,
 				C50B22D7246909E90009886C /* EntriesListAction.swift in Sources */,
 			);
@@ -396,6 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenDay-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = 9E8SXF3Y36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "OpenDay-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -415,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenDay-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = 9E8SXF3Y36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "OpenDay-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
