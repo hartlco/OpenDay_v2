@@ -4,6 +4,7 @@ import Models
 
 enum EntryAction {
     case updateTitle(text: String)
+    case updateBody(text: String)
     case loadLocation
     case updateEntryIfNeeded
     case updated

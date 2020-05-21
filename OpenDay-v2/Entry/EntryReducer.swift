@@ -8,6 +8,9 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
     case .updateTitle(let text):
         state.title = text
         return .none
+    case .updateBody(let text):
+        state.body = text
+        return .none
     case .updateEntryIfNeeded:
         guard let entry = state.entry else {
             return .none

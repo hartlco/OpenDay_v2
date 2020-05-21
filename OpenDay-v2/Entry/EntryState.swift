@@ -6,6 +6,6 @@ struct EntryState: Equatable {
     var entry: Entry?
 
     var title: String
-    var body: String?
+    var body: String
     var currentLocation: Location?
 }

@@ -29,6 +29,7 @@ EntriesListEnviornment>.combine(
                 if let newEntry = entry {
                     let entryState = EntryState(entry: entry,
                                                 title: newEntry.title,
+                                                body: entry?.bodyText ?? "",
                                                 currentLocation: entry?.location)
                     state.selection = Identified(entryState, id: newEntry)
                 } else {

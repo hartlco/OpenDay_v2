@@ -13,8 +13,6 @@
 		C50B22B92469074C0009886C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22B82469074C0009886C /* Assets.xcassets */; };
 		C50B22BC2469074C0009886C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BB2469074C0009886C /* Preview Assets.xcassets */; };
 		C50B22BF2469074C0009886C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BD2469074C0009886C /* LaunchScreen.storyboard */; };
-		C50B22C82469077C0009886C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C50B22C72469077C0009886C /* ComposableArchitecture */; };
-		C50B22C92469077C0009886C /* ComposableArchitecture in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C50B22C72469077C0009886C /* ComposableArchitecture */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C50B22D0246908F10009886C /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C50B22CF246908F10009886C /* Models */; };
 		C50B22D2246908F10009886C /* OpenDayService in Frameworks */ = {isa = PBXBuildFile; productRef = C50B22D1246908F10009886C /* OpenDayService */; };
 		C50B22D52469092F0009886C /* EntriesListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D42469092F0009886C /* EntriesListState.swift */; };
@@ -25,6 +23,8 @@
 		C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DE24690F220009886C /* OpenDayService+Effect.swift */; };
 		C51E535E247510D600AE653A /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = C51E535D247510D600AE653A /* LocationService */; };
 		C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51E535F2475110B00AE653A /* EntryEnviornment.swift */; };
+		C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8BE24757D2100D0B5FC /* ComposableArchitecture */; };
+		C548C8C22476448200D0B5FC /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8C12476448200D0B5FC /* TextView */; };
 		C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
 		C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
 		C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
@@ -38,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C50B22C92469077C0009886C /* ComposableArchitecture in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +63,7 @@
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
 		C51E535C2475109400AE653A /* LocationService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LocationService; sourceTree = "<group>"; };
 		C51E535F2475110B00AE653A /* EntryEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEnviornment.swift; sourceTree = "<group>"; };
+		C548C8C02476447400D0B5FC /* TextView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TextView; sourceTree = "<group>"; };
 		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
 		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
 		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
@@ -77,7 +77,8 @@
 			files = (
 				C50B22D0246908F10009886C /* Models in Frameworks */,
 				C51E535E247510D600AE653A /* LocationService in Frameworks */,
-				C50B22C82469077C0009886C /* ComposableArchitecture in Frameworks */,
+				C548C8C22476448200D0B5FC /* TextView in Frameworks */,
+				C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */,
 				C50B22D2246908F10009886C /* OpenDayService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +89,7 @@
 		C50B22A62469074B0009886C = {
 			isa = PBXGroup;
 			children = (
+				C548C8C02476447400D0B5FC /* TextView */,
 				C51E535C2475109400AE653A /* LocationService */,
 				C50B22CD246908E30009886C /* OpenDayService */,
 				C50B22CC246908DE0009886C /* Models */,
@@ -179,10 +181,11 @@
 			);
 			name = "OpenDay-v2";
 			packageProductDependencies = (
-				C50B22C72469077C0009886C /* ComposableArchitecture */,
 				C50B22CF246908F10009886C /* Models */,
 				C50B22D1246908F10009886C /* OpenDayService */,
 				C51E535D247510D600AE653A /* LocationService */,
+				C548C8BE24757D2100D0B5FC /* ComposableArchitecture */,
+				C548C8C12476448200D0B5FC /* TextView */,
 			);
 			productName = "OpenDay-v2";
 			productReference = C50B22AF2469074B0009886C /* OpenDay-v2.app */;
@@ -454,17 +457,12 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
 				kind = exactVersion;
-				version = 0.1.2;
+				version = 0.1.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C50B22C72469077C0009886C /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C50B22C62469077C0009886C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
 		C50B22CF246908F10009886C /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
@@ -476,6 +474,15 @@
 		C51E535D247510D600AE653A /* LocationService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LocationService;
+		};
+		C548C8BE24757D2100D0B5FC /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C50B22C62469077C0009886C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		C548C8C12476448200D0B5FC /* TextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TextView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
