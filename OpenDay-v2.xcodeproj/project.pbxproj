@@ -53,21 +53,21 @@
 		C50B22BB2469074C0009886C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C50B22BE2469074C0009886C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50B22C02469074C0009886C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C50B22CC246908DE0009886C /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		C50B22CD246908E30009886C /* OpenDayService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenDayService; sourceTree = "<group>"; };
 		C50B22D42469092F0009886C /* EntriesListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListState.swift; sourceTree = "<group>"; };
 		C50B22D6246909E90009886C /* EntriesListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListAction.swift; sourceTree = "<group>"; };
 		C50B22D824690A670009886C /* EntriesListEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListEnviornment.swift; sourceTree = "<group>"; };
 		C50B22DA24690ABA0009886C /* EntriesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListReducer.swift; sourceTree = "<group>"; };
 		C50B22DC24690C4C0009886C /* EntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListView.swift; sourceTree = "<group>"; };
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
-		C51E535C2475109400AE653A /* LocationService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LocationService; sourceTree = "<group>"; };
 		C51E535F2475110B00AE653A /* EntryEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEnviornment.swift; sourceTree = "<group>"; };
-		C548C8C02476447400D0B5FC /* TextView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TextView; sourceTree = "<group>"; };
 		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
 		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
 		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
 		C56E3D352471D2A90058FE07 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		C5C9AC5424764A2300BB49D8 /* LocationService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LocationService; sourceTree = "<group>"; };
+		C5C9AC5524764A2300BB49D8 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		C5C9AC5624764A2300BB49D8 /* TextView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TextView; sourceTree = "<group>"; };
+		C5C9AC5724764A2400BB49D8 /* OpenDayService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenDayService; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,10 @@
 		C50B22A62469074B0009886C = {
 			isa = PBXGroup;
 			children = (
-				C548C8C02476447400D0B5FC /* TextView */,
-				C51E535C2475109400AE653A /* LocationService */,
-				C50B22CD246908E30009886C /* OpenDayService */,
-				C50B22CC246908DE0009886C /* Models */,
+				C5C9AC5424764A2300BB49D8 /* LocationService */,
+				C5C9AC5524764A2300BB49D8 /* Models */,
+				C5C9AC5724764A2400BB49D8 /* OpenDayService */,
+				C5C9AC5624764A2300BB49D8 /* TextView */,
 				C50B22B12469074B0009886C /* OpenDay-v2 */,
 				C50B22B02469074B0009886C /* Products */,
 				C50B22CE246908F10009886C /* Frameworks */,
