@@ -9,4 +9,5 @@ struct EntryState: Equatable {
     var body: String
     var date: Date
     var currentLocation: Location?
+    var weather: Weather?
 }

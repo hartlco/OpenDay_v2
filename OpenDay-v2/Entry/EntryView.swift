@@ -39,7 +39,7 @@ struct EntryView: View {
                 }
                 Section {
                     Button(action: {
-                        viewStore.send(EntryAction.updateEntryIfNeeded)
+                        viewStore.send(.updateEntryIfNeeded)
                     }) {
                         Text("Update")
                     }
@@ -49,10 +49,15 @@ struct EntryView: View {
                         Text($0.city ?? "")
                     }
                     Button(action: {
-                        viewStore.send(EntryAction.loadLocation)
+                        viewStore.send(.loadLocation)
                     }, label: {
                         Text("Load current location")
                     })
+                }
+                Section {
+                    viewStore.weather.map {
+                        Text("\($0.fahrenheit)")
+                    }
                 }
             }
             .listStyle(GroupedListStyle())

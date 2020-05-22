@@ -1,5 +1,6 @@
 import Foundation
 import ComposableArchitecture
+import WeatherService
 
 let entriesListReducer = Reducer<EntriesListState,
     EntriesListAction,
@@ -31,7 +32,8 @@ EntriesListEnviornment>.combine(
                                                 title: newEntry.title,
                                                 body: entry?.bodyText ?? "",
                                                 date: entry?.date ?? Date(),
-                                                currentLocation: entry?.location)
+                                                currentLocation: entry?.location,
+                                                weather: entry?.weather)
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil
@@ -51,7 +53,8 @@ EntriesListEnviornment>.combine(
             environment: { enviornment in
                 EntryEnviornment(service: enviornment.service,
                                  mainQueue: enviornment.mainQueue,
-                                 locationService: enviornment.locationServcie)
+                                 locationService: enviornment.locationServcie,
+                                 weatherService: WeatherService(key: Secrets.weatherServiceSecret))
         }
     )
 )

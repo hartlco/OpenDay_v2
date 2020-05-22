@@ -86,3 +86,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # End of https://www.gitignore.io/api/xcode,macos,swift,swiftpm
+/OpenDay-v2/Secrets.swift

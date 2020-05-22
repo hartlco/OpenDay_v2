@@ -13,14 +13,15 @@ extension OpenDayService {
                 title: String?,
                 body: String?,
                 date: Date?,
-                location: Location?) -> Effect<String, Error> {
+                location: Location?,
+                weather: Weather?) -> Effect<String, Error> {
         let newEntry = Entry(id: entry.id,
                              title: title ?? entry.title,
                              bodyText: body ?? entry.bodyText,
                              date: date ?? entry.date,
                              images: entry.images,
                              location: location ?? entry.location,
-                             weather: entry.weather,
+                             weather: weather ?? entry.weather,
                              tags: entry.tags)
         let future: Future<String, Error> = self.perform(endpoint: .updateEntry(newEntry))
         return Effect(future)
