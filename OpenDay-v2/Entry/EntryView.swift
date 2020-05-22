@@ -48,8 +48,15 @@ struct EntryView: View {
                 Section {
                     ForEach(viewStore.images) { image in
                         KFImage.image(for: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .contextMenu {
+                                Button(action: {
+                                    viewStore.send(EntryAction.removeImage(image))
+                                }, label: {
+                                    Text("Delete")
+                                })
+                        }
                     }
                 }
                 Section {

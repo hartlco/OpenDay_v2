@@ -34,7 +34,8 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
                     body: state.body,
                     date: state.date,
                     location: state.currentLocation,
-                    weather: state.weather)
+                    weather: state.weather,
+                    images: state.images)
         .catchToEffect()
         .map { _ in
             return .updated

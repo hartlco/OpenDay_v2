@@ -14,12 +14,13 @@ extension OpenDayService {
                 body: String?,
                 date: Date?,
                 location: Location?,
-                weather: Weather?) -> Effect<String, Error> {
+                weather: Weather?,
+                images: [ImageResource]?) -> Effect<String, Error> {
         let newEntry = Entry(id: entry.id,
                              title: title ?? entry.title,
                              bodyText: body ?? entry.bodyText,
                              date: date ?? entry.date,
-                             images: entry.images,
+                             images: images ?? entry.images,
                              location: location ?? entry.location,
                              weather: weather ?? entry.weather,
                              tags: entry.tags)
