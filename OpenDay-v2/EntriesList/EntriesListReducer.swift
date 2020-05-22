@@ -33,7 +33,8 @@ EntriesListEnviornment>.combine(
                                                 body: entry?.bodyText ?? "",
                                                 date: entry?.date ?? Date(),
                                                 currentLocation: entry?.location,
-                                                weather: entry?.weather)
+                                                weather: entry?.weather,
+                                                images: entry?.images ?? [])
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil

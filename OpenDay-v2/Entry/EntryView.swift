@@ -2,6 +2,7 @@ import Foundation
 import ComposableArchitecture
 import SwiftUI
 import TextView
+import KingfisherSwiftUI
 
 struct EntryView: View {
     let store: Store<EntryState, EntryAction>
@@ -42,6 +43,13 @@ struct EntryView: View {
                         viewStore.send(.updateEntryIfNeeded)
                     }) {
                         Text("Update")
+                    }
+                }
+                Section {
+                    ForEach(viewStore.images) { image in
+                        KFImage.image(for: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                     }
                 }
                 Section {

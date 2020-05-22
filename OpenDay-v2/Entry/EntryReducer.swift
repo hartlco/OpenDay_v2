@@ -73,6 +73,16 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
         .receive(on: enviornment.mainQueue)
         .catchToEffect()
         .map(EntryAction.updateWeather)
+    case .addImage(let imageResource):
+        state.images.append(imageResource)
+
+        return .none
+    case .removeImage(let imageRsource):
+        state.images.removeAll {
+            $0 == imageRsource
+        }
+
+        return .none
     }
 }
 

@@ -10,4 +10,5 @@ struct EntryState: Equatable {
     var date: Date
     var currentLocation: Location?
     var weather: Weather?
+    var images: [ImageResource]
 }
