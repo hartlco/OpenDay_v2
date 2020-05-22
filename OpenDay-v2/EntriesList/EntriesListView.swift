@@ -2,6 +2,7 @@ import Foundation
 import ComposableArchitecture
 import SwiftUI
 import Models
+import KingfisherSwiftUI
 
 struct EntriesListView: View {
     let store: Store<EntriesListState, EntriesListAction>
@@ -45,6 +46,19 @@ struct EntryListRow: View {
     let entry: Entry
 
     var body: some View {
-        Text(entry.title)
+        VStack(alignment: .leading) {
+            Text(entry.title)
+                .font(.system(.headline, design: .rounded))
+            Text(entry.bodyText)
+                .font(.caption)
+            HStack {
+                ForEach(entry.images) { image in
+                    KFImage.image(for: image)
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                }
+            }
+            
+        }
     }
 }

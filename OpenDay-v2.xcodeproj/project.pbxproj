@@ -30,6 +30,9 @@
 		C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D352471D2A90058FE07 /* EntryView.swift */; };
 		C5CAD8EA2476C72700B3DE31 /* WeatherService in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8E92476C72700B3DE31 /* WeatherService */; };
 		C5CAD8EC2476C95500B3DE31 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8EB2476C95500B3DE31 /* Secrets.swift */; };
+		C5CAD8EF2477A6E100B3DE31 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */; };
+		C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8F02477A6E100B3DE31 /* Kingfisher */; };
+		C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +73,7 @@
 		C5C9AC5724764A2400BB49D8 /* OpenDayService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenDayService; sourceTree = "<group>"; };
 		C5CAD8E82476C71300B3DE31 /* WeatherService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherService; sourceTree = "<group>"; };
 		C5CAD8EB2476C95500B3DE31 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageResource+KFImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 				C51E535E247510D600AE653A /* LocationService in Frameworks */,
 				C548C8C22476448200D0B5FC /* TextView in Frameworks */,
 				C5CAD8EA2476C72700B3DE31 /* WeatherService in Frameworks */,
+				C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */,
 				C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */,
+				C5CAD8EF2477A6E100B3DE31 /* KingfisherSwiftUI in Frameworks */,
 				C50B22D2246908F10009886C /* OpenDayService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +129,7 @@
 				C50B22C02469074C0009886C /* Info.plist */,
 				C50B22BA2469074C0009886C /* Preview Content */,
 				C5CAD8EB2476C95500B3DE31 /* Secrets.swift */,
+				C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */,
 			);
 			path = "OpenDay-v2";
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 				C548C8BE24757D2100D0B5FC /* ComposableArchitecture */,
 				C548C8C12476448200D0B5FC /* TextView */,
 				C5CAD8E92476C72700B3DE31 /* WeatherService */,
+				C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */,
+				C5CAD8F02477A6E100B3DE31 /* Kingfisher */,
 			);
 			productName = "OpenDay-v2";
 			productReference = C50B22AF2469074B0009886C /* OpenDay-v2.app */;
@@ -222,6 +231,7 @@
 			mainGroup = C50B22A62469074B0009886C;
 			packageReferences = (
 				C50B22C62469077C0009886C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C50B22B02469074B0009886C /* Products */;
 			projectDirPath = "";
@@ -259,6 +269,7 @@
 				C50B22B32469074B0009886C /* AppDelegate.swift in Sources */,
 				C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */,
 				C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */,
+				C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */,
 				C5CAD8EC2476C95500B3DE31 /* Secrets.swift in Sources */,
 				C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */,
 				C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */,
@@ -467,6 +478,14 @@
 				version = 0.1.5;
 			};
 		};
+		C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,6 +513,16 @@
 		C5CAD8E92476C72700B3DE31 /* WeatherService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WeatherService;
+		};
+		C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		C5CAD8F02477A6E100B3DE31 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
