@@ -18,7 +18,7 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
             let weatherIcon = WeatherIcon(rawValue: weather.icon.rawValue)
             state.weather = Weather(weatherSymbol: weatherIcon, fahrenheit: Int(weather.temperatureFahrenheit))
         case .failure:
-            break
+            state.weather = nil
         }
 
         return .none
@@ -62,7 +62,17 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
         return .none
     case .updateDate(let date):
         state.date = date
-        return .none
+
+        guard let location = state.currentLocation else {
+            return .none
+        }
+
+        return enviornment.weatherService.getData(date: state.date,
+                                       latitude: location.coordinates.latitude,
+                                       longitude: location.coordinates.longitude)
+        .receive(on: enviornment.mainQueue)
+        .catchToEffect()
+        .map(EntryAction.updateWeather)
     }
 }
 
