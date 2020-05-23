@@ -77,13 +77,10 @@ struct EntryView: View {
                     .alert(isPresented: viewStore.binding(
                         get: { $0.isShowingImageDatePopup },
                         send: EntryAction.presentImageDatePopup
-                    )) { () -> Alert in
+                    )) {
                         Alert(title: Text("Use Location/Date"),
                               primaryButton: .default(Text("Yes"),
-                                                      action: {
-                                                        viewStore.send(.useImageLocationDate)
-                                                        
-                              }),
+                                                      action: { viewStore.send(.useImageLocationDate) }),
                               secondaryButton: .cancel())
                     }
                 }
