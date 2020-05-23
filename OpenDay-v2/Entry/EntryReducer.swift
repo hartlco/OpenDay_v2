@@ -122,4 +122,3 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
             .map(EntryAction.currentLocationChanged)
     }
 }
-

@@ -15,17 +15,18 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                             client: URLSession.shared)
         let queue = DispatchQueue.main.eraseToAnyScheduler()
 
-        let enviornment = EntriesListEnviornment(service: openDayService,
+        let entriesEnviornment = EntriesListEnviornment(service: openDayService,
                                                  mainQueue: queue,
                                                  locationServcie: locationService)
 
-        let contentView = EntriesListView(store: Store(initialState: EntriesListState(sections: []),
-                                                       reducer: entriesListReducer.debug(),
-                                                       environment: enviornment))
+        let tabEnviornment = TabEnviornment(entriesListEnviornment: entriesEnviornment)
+        let tabView = TabView(store: Store(initialState: TabState(),
+                                           reducer: tabReducer.debug(),
+                                           environment: tabEnviornment))
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: tabView)
             self.window = window
             window.makeKeyAndVisible()
         }

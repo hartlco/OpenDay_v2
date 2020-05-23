@@ -34,6 +34,11 @@
 		C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8F02477A6E100B3DE31 /* Kingfisher */; };
 		C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */; };
 		C5CAD8F62479070700B3DE31 /* ImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8F52479070700B3DE31 /* ImagePicker */; };
+		C5CAD8F9247982A800B3DE31 /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F8247982A800B3DE31 /* TabState.swift */; };
+		C5CAD8FB2479835C00B3DE31 /* TabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FA2479835C00B3DE31 /* TabAction.swift */; };
+		C5CAD8FD2479837900B3DE31 /* TabReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FC2479837900B3DE31 /* TabReducer.swift */; };
+		C5CAD8FF2479839900B3DE31 /* TabEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */; };
+		C5CAD9012479840300B3DE31 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD9002479840300B3DE31 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +81,11 @@
 		C5CAD8EB2476C95500B3DE31 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageResource+KFImage.swift"; sourceTree = "<group>"; };
 		C5CAD8F42479031100B3DE31 /* ImagePicker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ImagePicker; sourceTree = "<group>"; };
+		C5CAD8F8247982A800B3DE31 /* TabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabState.swift; sourceTree = "<group>"; };
+		C5CAD8FA2479835C00B3DE31 /* TabAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAction.swift; sourceTree = "<group>"; };
+		C5CAD8FC2479837900B3DE31 /* TabReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabReducer.swift; sourceTree = "<group>"; };
+		C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnviornment.swift; sourceTree = "<group>"; };
+		C5CAD9002479840300B3DE31 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 		C50B22B12469074B0009886C /* OpenDay-v2 */ = {
 			isa = PBXGroup;
 			children = (
+				C5CAD8F72479829300B3DE31 /* TabView */,
 				C56E3D2E2471D00B0058FE07 /* Entry */,
 				C50B22D3246909060009886C /* EntriesList */,
 				C50B22B22469074B0009886C /* AppDelegate.swift */,
@@ -176,6 +187,18 @@
 				C51E535F2475110B00AE653A /* EntryEnviornment.swift */,
 			);
 			path = Entry;
+			sourceTree = "<group>";
+		};
+		C5CAD8F72479829300B3DE31 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				C5CAD8F8247982A800B3DE31 /* TabState.swift */,
+				C5CAD8FA2479835C00B3DE31 /* TabAction.swift */,
+				C5CAD8FC2479837900B3DE31 /* TabReducer.swift */,
+				C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */,
+				C5CAD9002479840300B3DE31 /* TabView.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +289,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */,
+				C5CAD8F9247982A800B3DE31 /* TabState.swift in Sources */,
+				C5CAD8FF2479839900B3DE31 /* TabEnviornment.swift in Sources */,
 				C50B22D52469092F0009886C /* EntriesListState.swift in Sources */,
 				C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */,
 				C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */,
 				C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */,
 				C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */,
+				C5CAD8FB2479835C00B3DE31 /* TabAction.swift in Sources */,
 				C50B22B32469074B0009886C /* AppDelegate.swift in Sources */,
+				C5CAD9012479840300B3DE31 /* TabView.swift in Sources */,
 				C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */,
 				C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */,
 				C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */,
@@ -279,6 +306,7 @@
 				C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */,
 				C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */,
 				C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */,
+				C5CAD8FD2479837900B3DE31 /* TabReducer.swift in Sources */,
 				C50B22D7246909E90009886C /* EntriesListAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
