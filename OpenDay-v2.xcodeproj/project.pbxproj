@@ -33,6 +33,7 @@
 		C5CAD8EF2477A6E100B3DE31 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */; };
 		C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8F02477A6E100B3DE31 /* Kingfisher */; };
 		C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */; };
+		C5CAD8F62479070700B3DE31 /* ImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8F52479070700B3DE31 /* ImagePicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +75,7 @@
 		C5CAD8E82476C71300B3DE31 /* WeatherService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherService; sourceTree = "<group>"; };
 		C5CAD8EB2476C95500B3DE31 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageResource+KFImage.swift"; sourceTree = "<group>"; };
+		C5CAD8F42479031100B3DE31 /* ImagePicker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ImagePicker; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */,
 				C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */,
 				C5CAD8EF2477A6E100B3DE31 /* KingfisherSwiftUI in Frameworks */,
+				C5CAD8F62479070700B3DE31 /* ImagePicker in Frameworks */,
 				C50B22D2246908F10009886C /* OpenDayService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +101,7 @@
 		C50B22A62469074B0009886C = {
 			isa = PBXGroup;
 			children = (
+				C5CAD8F42479031100B3DE31 /* ImagePicker */,
 				C5CAD8E82476C71300B3DE31 /* WeatherService */,
 				C5C9AC5424764A2300BB49D8 /* LocationService */,
 				C5C9AC5524764A2300BB49D8 /* Models */,
@@ -200,6 +204,7 @@
 				C5CAD8E92476C72700B3DE31 /* WeatherService */,
 				C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */,
 				C5CAD8F02477A6E100B3DE31 /* Kingfisher */,
+				C5CAD8F52479070700B3DE31 /* ImagePicker */,
 			);
 			productName = "OpenDay-v2";
 			productReference = C50B22AF2469074B0009886C /* OpenDay-v2.app */;
@@ -523,6 +528,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		C5CAD8F52479070700B3DE31 /* ImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

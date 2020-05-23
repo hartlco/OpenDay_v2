@@ -3,6 +3,7 @@ import ComposableArchitecture
 import SwiftUI
 import TextView
 import KingfisherSwiftUI
+import ImagePicker
 
 struct EntryView: View {
     let store: Store<EntryState, EntryAction>
@@ -57,6 +58,33 @@ struct EntryView: View {
                                     Text("Delete")
                                 })
                         }
+                    }
+                    Button(action: {
+                        viewStore.send(EntryAction.presentImagePicker(true))
+                    }) {
+                        Text("Add Image")
+                    }
+                    .sheet(isPresented: viewStore.binding(
+                        get: { $0.isShowingImagePicker },
+                        send: EntryAction.presentImagePicker
+                    )) {
+                        ImagePicker { image, location, date in
+                            viewStore.send(EntryAction.imagePicked(image: image,
+                                                                   location: location,
+                                                                   date: date))
+                        }
+                    }
+                    .alert(isPresented: viewStore.binding(
+                        get: { $0.isShowingImageDatePopup },
+                        send: EntryAction.presentImageDatePopup
+                    )) { () -> Alert in
+                        Alert(title: Text("Use Location/Date"),
+                              primaryButton: .default(Text("Yes"),
+                                                      action: {
+                                                        viewStore.send(.useImageLocationDate)
+                                                        
+                              }),
+                              secondaryButton: .cancel())
                     }
                 }
                 Section {

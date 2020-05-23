@@ -1,4 +1,5 @@
-import Foundation
+import UIKit
+import CoreLocation
 import ComposableArchitecture
 import Models
 import WeatherService
@@ -14,4 +15,8 @@ enum EntryAction {
     case updateEntryIfNeeded
     case updated
     case currentLocationChanged(Result<Location, Error>)
+    case presentImagePicker(Bool)
+    case imagePicked(image: UIImage, location: CLLocation?, date: Date?)
+    case presentImageDatePopup(Bool)
+    case useImageLocationDate
 }
