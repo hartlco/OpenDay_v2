@@ -9,6 +9,7 @@ extension OpenDayService {
         return Effect<[EntriesSection], Error>(perform(endpoint: .entries))
     }
 
+    //swiftlint:disable function_parameter_count
     func update(entry: Entry,
                 title: String?,
                 body: String?,

@@ -42,9 +42,9 @@ struct EntryView: View {
                 Section {
                     Button(action: {
                         viewStore.send(.updateEntryIfNeeded)
-                    }) {
+                    }, label: {
                         Text("Update")
-                    }
+                    })
                 }
                 Section {
                     ForEach(viewStore.images) { image in
@@ -61,9 +61,9 @@ struct EntryView: View {
                     }
                     Button(action: {
                         viewStore.send(EntryAction.presentImagePicker(true))
-                    }) {
+                    }, label: {
                         Text("Add Image")
-                    }
+                    })
                     .sheet(isPresented: viewStore.binding(
                         get: { $0.isShowingImagePicker },
                         send: EntryAction.presentImagePicker
@@ -105,4 +105,3 @@ struct EntryView: View {
         }
     }
 }
-

@@ -1,5 +1,5 @@
 // Adapter from https://github.com/AlanQuatermain/AQUI/blob/master/Sources/AQUI/TextView.swift
-
+//swiftlint:disable file_length
 import SwiftUI
 import Combine
 #if canImport(UIKit)

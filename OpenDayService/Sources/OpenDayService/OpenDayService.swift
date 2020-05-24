@@ -15,6 +15,7 @@ extension URLSession: Client {
 }
 
 extension URLSession {
+    //swiftlint:disable large_tuple
     func synchronousDataTask(urlrequest: URLRequest) -> (data: Data?, response: URLResponse?, error: Error?) {
         var data: Data?
         var response: URLResponse?

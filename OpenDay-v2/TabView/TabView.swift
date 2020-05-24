@@ -16,12 +16,12 @@ struct TabView: View {
                     .tabItem {
                         Image(systemName: "house")
                         Text("Entries")
-                    }
-                    .tag(TabState.Tab.entries)
+                }
+                .tag(TabState.Tab.entries)
                 Text("Two")
-                .tabItem {
-                    Image(systemName: "map")
-                    Text("Map")
+                    .tabItem {
+                        Image(systemName: "map")
+                        Text("Map")
                 }
                 .tag(TabState.Tab.map)
             }

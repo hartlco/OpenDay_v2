@@ -7,6 +7,7 @@ public struct EntriesSection: Codable, Identifiable, Equatable {
         self.entries = entries
     }
 
+    //swiftlint:disable identifier_name
     public var id: String {
         return title
     }
@@ -130,7 +131,7 @@ public struct Location: Codable, Identifiable, Equatable {
     public struct Coordinates: Codable, Equatable {
         public let longitude: Double
         public let latitude: Double
-        
+
         public init(longitude: Double, latitude: Double) {
             self.longitude = longitude
             self.latitude = latitude

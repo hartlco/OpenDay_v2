@@ -33,7 +33,7 @@ struct EntriesListView: View {
                         }
                     }
                 }
-                .onAppear() {
+                .onAppear {
                     viewStore.send(.loadingTriggered)
                 }
             }
@@ -58,7 +58,6 @@ struct EntryListRow: View {
                     .frame(width: 80, height: 80)
                 }
             }
-            
         }
     }
 }

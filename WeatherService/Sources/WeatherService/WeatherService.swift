@@ -40,6 +40,8 @@ public final class WeatherService {
     private let urlSession: URLSession
     private let key: String
 
+    private let forseBaseURLString = "https://api.darksky.net/forecast"
+
     public init(urlSession: URLSession = .shared,
                 key: String) {
         self.urlSession = urlSession
@@ -51,9 +53,14 @@ public final class WeatherService {
                         longitude: Double) -> Future<WeatherData, Error> {
         let date = date ?? Date()
         let timestamp = Int(date.timeIntervalSince1970)
+        let urlString = "\(self.forseBaseURLString)/" +
+        "\(self.key)/" +
+        "\(latitude)," +
+        "\(longitude)," +
+        "\(timestamp)?units=us"
 
         return Future<WeatherData, Error> { promise in
-            let url = URL(string: "https://api.darksky.net/forecast/\(self.key)/\(latitude),\(longitude),\(timestamp)?units=us")!
+            let url = URL(string: urlString)!
 
             self.urlSession.dataTask(with: url) { data, _, _ in
                 guard let data = data else {

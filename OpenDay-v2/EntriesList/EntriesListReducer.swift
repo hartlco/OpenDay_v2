@@ -41,7 +41,7 @@ EntriesListEnviornment>.combine(
                 }
 
                 return .none
-            case .entry(_):
+            case .entry:
                 return .none
         }
     },

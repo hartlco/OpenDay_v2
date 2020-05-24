@@ -10,6 +10,6 @@ final class ImagePickerTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

@@ -9,7 +9,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private let baseURL = URL(string: "http://192.168.10.50:8000")!
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         let locationService = LocationService(locationManager: .init())
         let openDayService = OpenDayService(baseURL: baseURL,
                                             client: URLSession.shared)
@@ -46,7 +48,4 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
-
-
 }
-

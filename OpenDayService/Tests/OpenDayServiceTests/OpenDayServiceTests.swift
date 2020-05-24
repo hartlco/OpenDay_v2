@@ -10,6 +10,6 @@ final class OpenDayServiceTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

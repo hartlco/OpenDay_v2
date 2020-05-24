@@ -1,8 +1,7 @@
 import ComposableArchitecture
 import Models
 
-let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> {
-    state, action, enviornment in
+let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> { state, action, enviornment in
     switch action {
     case .updated:
         return .none
