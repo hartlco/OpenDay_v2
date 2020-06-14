@@ -99,6 +99,10 @@ struct EntryView: View {
                         Text("\($0.fahrenheit)")
                     }
                 }
+                EntryTagView(store: self.store.scope(
+                    state: { $0.entryTagState },
+                    action: EntryAction.tagAction)
+                )
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Entry")

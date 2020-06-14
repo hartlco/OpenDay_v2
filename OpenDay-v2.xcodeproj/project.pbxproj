@@ -24,6 +24,11 @@
 		C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51E535F2475110B00AE653A /* EntryEnviornment.swift */; };
 		C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8BE24757D2100D0B5FC /* ComposableArchitecture */; };
 		C548C8C22476448200D0B5FC /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8C12476448200D0B5FC /* TextView */; };
+		C569311F2495E5BB00D1864D /* EntryTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569311E2495E5BB00D1864D /* EntryTagView.swift */; };
+		C56931212495E62100D1864D /* EntryTagState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931202495E62100D1864D /* EntryTagState.swift */; };
+		C56931232495E66F00D1864D /* EntryTagAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931222495E66F00D1864D /* EntryTagAction.swift */; };
+		C56931252495E6A800D1864D /* EntryTagEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931242495E6A800D1864D /* EntryTagEnviornment.swift */; };
+		C56931272495E6BF00D1864D /* EntryTagReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931262495E6BF00D1864D /* EntryTagReducer.swift */; };
 		C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
 		C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
 		C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
@@ -69,6 +74,11 @@
 		C50B22DC24690C4C0009886C /* EntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListView.swift; sourceTree = "<group>"; };
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
 		C51E535F2475110B00AE653A /* EntryEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEnviornment.swift; sourceTree = "<group>"; };
+		C569311E2495E5BB00D1864D /* EntryTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagView.swift; sourceTree = "<group>"; };
+		C56931202495E62100D1864D /* EntryTagState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagState.swift; sourceTree = "<group>"; };
+		C56931222495E66F00D1864D /* EntryTagAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagAction.swift; sourceTree = "<group>"; };
+		C56931242495E6A800D1864D /* EntryTagEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagEnviornment.swift; sourceTree = "<group>"; };
+		C56931262495E6BF00D1864D /* EntryTagReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagReducer.swift; sourceTree = "<group>"; };
 		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
 		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
 		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
@@ -177,9 +187,22 @@
 			path = EntriesList;
 			sourceTree = "<group>";
 		};
+		C569311D2495E59400D1864D /* EntryTagView */ = {
+			isa = PBXGroup;
+			children = (
+				C56931202495E62100D1864D /* EntryTagState.swift */,
+				C569311E2495E5BB00D1864D /* EntryTagView.swift */,
+				C56931222495E66F00D1864D /* EntryTagAction.swift */,
+				C56931242495E6A800D1864D /* EntryTagEnviornment.swift */,
+				C56931262495E6BF00D1864D /* EntryTagReducer.swift */,
+			);
+			path = EntryTagView;
+			sourceTree = "<group>";
+		};
 		C56E3D2E2471D00B0058FE07 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
+				C569311D2495E59400D1864D /* EntryTagView */,
 				C56E3D2F2471D02D0058FE07 /* EntryState.swift */,
 				C56E3D312471D0CF0058FE07 /* EntryAction.swift */,
 				C56E3D332471D2630058FE07 /* EntryReducer.swift */,
@@ -322,10 +345,15 @@
 				C50B22B32469074B0009886C /* AppDelegate.swift in Sources */,
 				C5CAD9012479840300B3DE31 /* TabView.swift in Sources */,
 				C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */,
+				C569311F2495E5BB00D1864D /* EntryTagView.swift in Sources */,
+				C56931272495E6BF00D1864D /* EntryTagReducer.swift in Sources */,
 				C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */,
 				C5CAD8F32477CB2600B3DE31 /* ImageResource+KFImage.swift in Sources */,
+				C56931252495E6A800D1864D /* EntryTagEnviornment.swift in Sources */,
+				C56931212495E62100D1864D /* EntryTagState.swift in Sources */,
 				C5CAD8EC2476C95500B3DE31 /* Secrets.swift in Sources */,
 				C50B22B52469074B0009886C /* SceneDelegate.swift in Sources */,
+				C56931232495E66F00D1864D /* EntryTagAction.swift in Sources */,
 				C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */,
 				C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */,
 				C5CAD8FD2479837900B3DE31 /* TabReducer.swift in Sources */,

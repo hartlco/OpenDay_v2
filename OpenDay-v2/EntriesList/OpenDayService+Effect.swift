@@ -16,7 +16,8 @@ extension OpenDayService {
                 date: Date?,
                 location: Location?,
                 weather: Weather?,
-                images: [ImageResource]?) -> Effect<String, Error> {
+                images: [ImageResource]?,
+                tags: [String]) -> Effect<String, Error> {
         let newEntry = Entry(id: entry.id,
                              title: title ?? entry.title,
                              bodyText: body ?? entry.bodyText,
@@ -24,7 +25,7 @@ extension OpenDayService {
                              images: images ?? entry.images,
                              location: location ?? entry.location,
                              weather: weather ?? entry.weather,
-                             tags: entry.tags)
+                             tags: tags)
         let future: Future<String, Error> = self.perform(endpoint: .updateEntry(newEntry))
         return Effect(future)
     }

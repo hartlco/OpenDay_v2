@@ -28,13 +28,16 @@ EntriesListEnviornment>.combine(
                 }
             case .setNavigation(let entry):
                 if let newEntry = entry {
+                    let tagState = EntryTagState(tags: entry?.tags ?? [])
+
                     let entryState = EntryState(entry: entry,
                                                 title: newEntry.title,
                                                 body: entry?.bodyText ?? "",
                                                 date: entry?.date ?? Date(),
                                                 currentLocation: entry?.location,
                                                 weather: entry?.weather,
-                                                images: entry?.images ?? [])
+                                                images: entry?.images ?? [],
+                                                entryTagState: tagState)
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil

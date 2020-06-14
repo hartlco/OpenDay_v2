@@ -1,7 +1,8 @@
 import ComposableArchitecture
 import Models
 
-let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> { state, action, enviornment in
+let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment>.combine(
+Reducer { state, action, enviornment in
     switch action {
     case .updated:
         return .none
@@ -34,7 +35,8 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> { state, a
                     date: state.date,
                     location: state.currentLocation,
                     weather: state.weather,
-                    images: state.images)
+                    images: state.images,
+                    tags: state.entryTagState.tags)
         .catchToEffect()
         .map { _ in
             return .updated
@@ -77,9 +79,9 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> { state, a
         state.images.append(imageResource)
 
         return .none
-    case .removeImage(let imageRsource):
+    case .removeImage(let imageResource):
         state.images.removeAll {
-            $0 == imageRsource
+            $0 == imageResource
         }
 
         return .none
@@ -119,5 +121,14 @@ let entryReducer = Reducer<EntryState, EntryAction, EntryEnviornment> { state, a
             .receive(on: enviornment.mainQueue)
             .catchToEffect()
             .map(EntryAction.currentLocationChanged)
+    case .tagAction:
+        return .none
     }
-}
+},
+entryTagReducer.pullback(state: \EntryState.entryTagState,
+                         action: /EntryAction.tagAction,
+                         environment: { _ in
+                            EntryTagEnviornment()
+
+})
+)

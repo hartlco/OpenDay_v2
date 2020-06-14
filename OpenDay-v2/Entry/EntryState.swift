@@ -18,4 +18,6 @@ struct EntryState: Equatable {
     var currentLocation: Location?
     var weather: Weather?
     var images: [ImageResource]
+
+    var entryTagState: EntryTagState
 }

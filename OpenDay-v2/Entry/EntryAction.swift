@@ -19,4 +19,5 @@ enum EntryAction {
     case imagePicked(image: UIImage, location: CLLocation?, date: Date?)
     case presentImageDatePopup(Bool)
     case useImageLocationDate
+    case tagAction(EntryTagAction)
 }
