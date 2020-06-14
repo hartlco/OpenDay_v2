@@ -49,7 +49,7 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
             let image = asset.image
 
             parent.imagePicked?(image, asset.location, asset.creationDate)
-            parent.presentationMode.dismiss()
+//            parent.presentationMode.dismiss()
             picker.dismiss(animated: true, completion: nil)
         }
 

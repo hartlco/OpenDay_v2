@@ -35,7 +35,7 @@ Reducer { state, action, enviornment in
                     date: state.date,
                     location: state.currentLocation,
                     weather: state.weather,
-                    images: state.images,
+                    images: state.entryImagesState.images,
                     tags: state.entryTagState.tags)
         .catchToEffect()
         .map { _ in
@@ -75,54 +75,25 @@ Reducer { state, action, enviornment in
         .receive(on: enviornment.mainQueue)
         .catchToEffect()
         .map(EntryAction.updateWeather)
-    case .addImage(let imageResource):
-        state.images.append(imageResource)
-
-        return .none
-    case .removeImage(let imageResource):
-        state.images.removeAll {
-            $0 == imageResource
-        }
-
-        return .none
-    case .presentImagePicker(let showing):
-        state.isShowingImagePicker = showing
-
-        return .none
-    case .imagePicked(let image, let location, let date):
-        guard let jpgData = image.jpegData(compressionQuality: 0.8) else {
-            return .none
-        }
-
-        state.dateOfLastAddedImage = date
-        state.locationOfLastAddedImage = location
-
-        if location != nil, date != nil {
-            state.isShowingImageDatePopup = true
-        }
-
-        let imageResource = ImageResource.local(data: jpgData,
-                                                creationDate: date)
-
-        return Effect(value: EntryAction.addImage(imageResource))
-    case .presentImageDatePopup(let showing):
-        state.isShowingImageDatePopup = showing
-
-        return .none
-    case .useImageLocationDate:
-        state.date = state.dateOfLastAddedImage ?? state.date
-
-        guard let location = state.locationOfLastAddedImage else {
-            return .none
-        }
-
-        return enviornment.locationService
-            .getLocation(from: location)
-            .receive(on: enviornment.mainQueue)
-            .catchToEffect()
-            .map(EntryAction.currentLocationChanged)
     case .tagAction:
         return .none
+    case .imageAction(let action):
+        switch action {
+        case .useImageLocationDate:
+            state.date = state.entryImagesState.dateOfLastAddedImage ?? state.date
+
+            guard let location = state.entryImagesState.locationOfLastAddedImage else {
+                return .none
+            }
+
+            return enviornment.locationService
+                .getLocation(from: location)
+                .receive(on: enviornment.mainQueue)
+                .catchToEffect()
+                .map(EntryAction.currentLocationChanged)
+        default:
+            return .none
+        }
     }
 },
 entryTagReducer.pullback(state: \EntryState.entryTagState,
@@ -130,5 +101,10 @@ entryTagReducer.pullback(state: \EntryState.entryTagState,
                          environment: { _ in
                             EntryTagEnviornment()
 
+}),
+entryImagesReducer.pullback(state: \EntryState.entryImagesState,
+                            action: /EntryAction.imageAction,
+                            environment: { _ in
+                                EntryImagesEnviornment()
 })
 )
