@@ -18,7 +18,9 @@ struct TabView: View {
                         Text("Entries")
                 }
                 .tag(TabState.Tab.entries)
-                Text("Two")
+                MapEntryView(store: self.store.scope(
+                    state: { $0.mapViewState },
+                    action: TabAction.mapViewAction))
                     .tabItem {
                         Image(systemName: "map")
                         Text("Map")

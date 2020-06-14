@@ -9,6 +9,19 @@ let tabReducer = Reducer<TabState, TabAction, TabEnviornment>.combine(
             state.selection = Identified(tab, id: tab)
             return .none
         case .entryList(let action):
+            switch action {
+            case let .entriesResponse(.success(sections)):
+                state.mapViewState.entries = sections.flatMap {
+                    return $0.entries
+                }
+                state.mapViewState.locations = state.mapViewState.entries.compactMap {
+                    $0.location
+                }
+                return .none
+            default:
+                return .none
+            }
+        case .mapViewAction(let action):
             return .none
         }
     },
@@ -16,6 +29,10 @@ let tabReducer = Reducer<TabState, TabAction, TabEnviornment>.combine(
                                 action: /TabAction.entryList,
                                 environment: {
                                     return $0.entriesListEnviornment
+    }),
+    mapViewReducer.pullback(state: \TabState.mapViewState,
+                            action: /TabAction.mapViewAction,
+                            environment: { _ in
+                                return MapViewEnviornment()
     })
-
 )

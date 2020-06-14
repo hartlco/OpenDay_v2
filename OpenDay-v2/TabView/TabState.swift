@@ -8,4 +8,5 @@ struct TabState: Equatable {
 
     var selection: Identified<Tab?, Tab?>?
     var entriesState = EntriesListState(sections: [])
+    var mapViewState = MapViewState(entries: [], locations: [])
 }
