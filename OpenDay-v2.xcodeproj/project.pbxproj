@@ -168,7 +168,7 @@
 		C50B22B12469074B0009886C /* OpenDay-v2 */ = {
 			isa = PBXGroup;
 			children = (
-				C56931332496913900D1864D /* MapView */,
+				C56931332496913900D1864D /* MapEntryView */,
 				C5CAD8F72479829300B3DE31 /* TabView */,
 				C56E3D2E2471D00B0058FE07 /* Entry */,
 				C50B22D3246909060009886C /* EntriesList */,
@@ -236,7 +236,7 @@
 			path = EntryImagesView;
 			sourceTree = "<group>";
 		};
-		C56931332496913900D1864D /* MapView */ = {
+		C56931332496913900D1864D /* MapEntryView */ = {
 			isa = PBXGroup;
 			children = (
 				C56931342496917000D1864D /* MapViewState.swift */,
@@ -245,7 +245,7 @@
 				C569313A249698AC00D1864D /* MapViewEnviornment.swift */,
 				C569313C249699E500D1864D /* MapEntryView.swift */,
 			);
-			path = MapView;
+			path = MapEntryView;
 			sourceTree = "<group>";
 		};
 		C56E3D2E2471D00B0058FE07 /* Entry */ = {
