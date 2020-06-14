@@ -45,6 +45,23 @@ EntriesListEnviornment>.combine(
                 }
 
                 return .none
+            case .showAddEntry(let value):
+                let tagState = EntryTagState(tags: [])
+                let imageState = EntryImagesState(images: [])
+
+                let entryState = EntryState(entry: nil,
+                                            title: "",
+                                            body: "",
+                                            date: Date(),
+                                            currentLocation: nil,
+                                            weather: nil,
+                                            entryTagState: tagState,
+                                            entryImagesState: imageState)
+
+                state.newEntryState = entryState
+                state.showsAddEntry = value
+
+                return .none
             case .entry:
                 return .none
         }
@@ -61,5 +78,13 @@ EntriesListEnviornment>.combine(
                                  locationService: enviornment.locationServcie,
                                  weatherService: WeatherService(key: Secrets.weatherServiceSecret))
         }
-    )
+    ),
+    entryReducer.optional.pullback(state: \EntriesListState.newEntryState,
+                          action: /EntriesListAction.entry,
+                          environment: { enviornment in
+                            EntryEnviornment(service: enviornment.service,
+                            mainQueue: enviornment.mainQueue,
+                            locationService: enviornment.locationServcie,
+                            weatherService: WeatherService(key: Secrets.weatherServiceSecret))
+    })
 )

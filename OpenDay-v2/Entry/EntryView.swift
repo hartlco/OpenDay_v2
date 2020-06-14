@@ -12,7 +12,7 @@ struct EntryView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             List {
-                Section {
+                Section(header: Text("Content")) {
                     TextField(
                       "Title",
                       text: viewStore.binding(get: { $0.title },

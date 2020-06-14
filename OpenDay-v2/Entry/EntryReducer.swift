@@ -23,13 +23,9 @@ Reducer { state, action, enviornment in
 
         return .none
     case .updateEntryIfNeeded:
-        guard let entry = state.entry else {
-            return .none
-        }
-
         return enviornment
             .service
-            .update(entry: entry,
+            .createOrUpdate(entry: state.entry,
                     title: state.title,
                     body: state.body,
                     date: state.date,

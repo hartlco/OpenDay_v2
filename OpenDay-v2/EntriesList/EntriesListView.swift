@@ -36,8 +36,21 @@ struct EntriesListView: View {
                 .onAppear {
                     viewStore.send(.loadingTriggered)
                 }
+                .navigationBarTitle("Entries")
+                .navigationBarItems(trailing:
+                    NavigationLink(destination: IfLetStore(
+                        self.store.scope(
+                            state: { $0.newEntryState },
+                            action: EntriesListAction.entry),
+                        then: EntryView.init(store:),
+                        else: Text("Test")
+                    ), isActive: viewStore.binding(
+                        get: { $0.showsAddEntry },
+                        send: EntriesListAction.showAddEntry
+                    )) {
+                        Text("Add")
+                    })
             }
-            .navigationBarTitle("Entries")
         }
     }
 }

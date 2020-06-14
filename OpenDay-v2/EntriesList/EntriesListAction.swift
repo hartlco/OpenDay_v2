@@ -7,5 +7,6 @@ enum EntriesListAction {
     case entriesResponse(Result<[EntriesSection], Error>)
     case delete(Entry)
     case setNavigation(selection: Entry?)
+    case showAddEntry(Bool)
     case entry(EntryAction)
 }
