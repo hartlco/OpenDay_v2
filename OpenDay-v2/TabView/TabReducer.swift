@@ -32,7 +32,7 @@ let tabReducer = Reducer<TabState, TabAction, TabEnviornment>.combine(
     }),
     mapViewReducer.pullback(state: \TabState.mapViewState,
                             action: /TabAction.mapViewAction,
-                            environment: { _ in
-                                return MapViewEnviornment()
+                            environment: {
+                                return $0.mapViewEnviornment
     })
 )

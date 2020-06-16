@@ -15,27 +15,41 @@ struct EntryView: View {
                 Section(header: Text("Content")) {
                     TextField(
                       "Title",
-                      text: viewStore.binding(get: { $0.title },
-                                              send: EntryAction.updateTitle(text:))
+                      text: viewStore.binding(
+                        get: { $0.title },
+                        send: EntryAction.updateTitle(text:)
+                        )
                     )
-                    ExpandingTextView(placeholder: "Body",
-                                      text: viewStore.binding(get: { $0.body },
-                                                              send: EntryAction.updateBody(text:)),
-                                      minHeight: self.bodyHeight,
-                                      calculatedHeight: self.$bodyHeight)
+                    ExpandingTextView(
+                        placeholder: "Body",
+                        text: viewStore.binding(
+                            get: { $0.body },
+                            send: EntryAction.updateBody(text:)
+                        ),
+                        minHeight: self.bodyHeight,
+                        calculatedHeight: self.$bodyHeight
+                    )
                 }
                 Section(header: Text("Date")) {
-                    DatePicker(selection: viewStore.binding(get: { $0.date },
-                                                            send: EntryAction.updateDate(date:)),
-                               in: Date(timeIntervalSince1970: 0)...,
-                               displayedComponents: .date) {
-                                Text("Date")
+                    DatePicker(
+                        selection: viewStore.binding(
+                        get: { $0.date },
+                        send: EntryAction.updateDate(date:)
+                        ),
+                        in: Date(timeIntervalSince1970: 0)...,
+                        displayedComponents: .date
+                    ) {
+                            Text("Date")
                     }
-                    DatePicker(selection: viewStore.binding(get: { $0.date },
-                                                            send: EntryAction.updateDate(date:)),
-                               in: Date(timeIntervalSince1970: 0)...,
-                               displayedComponents: .hourAndMinute) {
-                                Text("Time")
+                    DatePicker(
+                        selection: viewStore.binding(
+                        get: { $0.date },
+                        send: EntryAction.updateDate(date:)
+                        ),
+                        in: Date(timeIntervalSince1970: 0)...,
+                        displayedComponents: .hourAndMinute
+                    ) {
+                            Text("Time")
                     }
                 }
                 Section {
@@ -53,7 +67,8 @@ struct EntryView: View {
                     viewStore.currentLocation.map {
                         Text($0.city ?? "")
                     }
-                    Button(action: {
+                    Button(
+                        action: {
                         viewStore.send(.loadLocation)
                     }, label: {
                         Text("Load current location")
@@ -64,9 +79,10 @@ struct EntryView: View {
                         Text("\($0.fahrenheit)")
                     }
                 }
-                EntryTagView(store: self.store.scope(
-                    state: { $0.entryTagState },
-                    action: EntryAction.tagAction)
+                EntryTagView(
+                    store: self.store.scope(
+                        state: { $0.entryTagState },
+                        action: EntryAction.tagAction)
                 )
             }
             .listStyle(GroupedListStyle())

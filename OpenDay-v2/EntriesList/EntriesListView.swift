@@ -11,7 +11,7 @@ struct EntriesListView: View {
         NavigationView {
             WithViewStore(store) { viewStore in
                 List {
-                    ForEach(viewStore.sections) { (section: EntriesSection) in
+                    ForEach(viewStore.sections) { section in
                         Section(header: Text(section.title)) {
                             ForEach(section.entries) { (entry: Entry) in
                                 NavigationLink(
@@ -28,6 +28,14 @@ struct EntriesListView: View {
                                   )
                                 ) {
                                     EntryListRow(entry: entry)
+                                        .contextMenu {
+                                            Button(
+                                                action: {
+                                                    viewStore.send(.delete(entry))
+                                            }, label: {
+                                                Text("Delete")
+                                            })
+                                    }
                                 }
                             }
                         }
@@ -38,7 +46,8 @@ struct EntriesListView: View {
                 }
                 .navigationBarTitle("Entries")
                 .navigationBarItems(trailing:
-                    NavigationLink(destination: IfLetStore(
+                    NavigationLink(
+                        destination: IfLetStore(
                         self.store.scope(
                             state: { $0.newEntryState },
                             action: EntriesListAction.entry),
@@ -66,9 +75,11 @@ struct EntryListRow: View {
                 .font(.caption)
             HStack {
                 ForEach(entry.images) { image in
-                    KFImage.image(for: image)
-                    .resizable()
-                    .frame(width: 80, height: 80)
+                    KFImage
+                        .image(for: image)
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .cornerRadius(4.0)
                 }
             }
         }

@@ -21,7 +21,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                                  mainQueue: queue,
                                                  locationServcie: locationService)
 
-        let tabEnviornment = TabEnviornment(entriesListEnviornment: entriesEnviornment)
+        let tabEnviornment = TabEnviornment(entriesListEnviornment: entriesEnviornment,
+                                            mapViewEnviornment: MapViewEnviornment())
         let tabView = TabView(store: Store(initialState: TabState(),
                                            reducer: tabReducer.debug(),
                                            environment: tabEnviornment))

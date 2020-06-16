@@ -21,11 +21,11 @@ EntriesListEnviornment>.combine(
                 return .none
             case .delete(let entry):
                 return enviornment.service
-                .deleteEntry(entry)
-                .catchToEffect()
-                .map { _ in
-                    return EntriesListAction.loadingTriggered
-                }
+                    .deleteEntry(entry)
+                    .catchToEffect()
+                    .map { _ in
+                        return EntriesListAction.loadingTriggered
+                    }
             case .setNavigation(let entry):
                 if let newEntry = entry {
                     let tagState = EntryTagState(tags: entry?.tags ?? [])
@@ -72,19 +72,15 @@ EntriesListEnviornment>.combine(
         .pullback(
             state: \EntriesListState.selection,
             action: /EntriesListAction.entry,
-            environment: { enviornment in
-                EntryEnviornment(service: enviornment.service,
-                                 mainQueue: enviornment.mainQueue,
-                                 locationService: enviornment.locationServcie,
-                                 weatherService: WeatherService(key: Secrets.weatherServiceSecret))
+            environment: {
+                $0.entryEnviornment
         }
     ),
-    entryReducer.optional.pullback(state: \EntriesListState.newEntryState,
-                          action: /EntriesListAction.entry,
-                          environment: { enviornment in
-                            EntryEnviornment(service: enviornment.service,
-                            mainQueue: enviornment.mainQueue,
-                            locationService: enviornment.locationServcie,
-                            weatherService: WeatherService(key: Secrets.weatherServiceSecret))
+    entryReducer
+        .optional
+        .pullback(state: \EntriesListState.newEntryState,
+                  action: /EntriesListAction.entry,
+                  environment: {
+                    $0.entryEnviornment
     })
 )
