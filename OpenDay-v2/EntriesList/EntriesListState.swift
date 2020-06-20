@@ -4,8 +4,8 @@ import ComposableArchitecture
 
 struct EntriesListState: Equatable {
     var sections: [EntriesSection]
-    var selection: Identified<Entry?, EntryState>?
+    var selection: Identified<Entry?, EntryState?>?
 
-    var newEntryState: EntryState?
+    var detailState = EntryState.empty()
     var showsAddEntry = false
 }

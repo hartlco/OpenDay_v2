@@ -15,11 +15,9 @@ struct EntriesListView: View {
                         Section(header: Text(section.title)) {
                             ForEach(section.entries) { (entry: Entry) in
                                 NavigationLink(
-                                  destination: IfLetStore(
-                                    self.store.scope(
-                                      state: { $0.selection?.value }, action: EntriesListAction.entry),
-                                    then: EntryView.init(store:),
-                                    else: Text("Test")
+                                  destination: EntryView(store: self.store.scope(
+                                    state: { $0.detailState },
+                                    action: EntriesListAction.entry)
                                   ),
                                   tag: entry,
                                   selection: viewStore.binding(
@@ -41,24 +39,25 @@ struct EntriesListView: View {
                         }
                     }
                 }
-                .onAppear {
-                    viewStore.send(.loadingTriggered)
-                }
                 .navigationBarTitle("Entries")
                 .navigationBarItems(trailing:
                     NavigationLink(
-                        destination: IfLetStore(
-                        self.store.scope(
-                            state: { $0.newEntryState },
-                            action: EntriesListAction.entry),
-                        then: EntryView.init(store:),
-                        else: Text("Test")
+                        destination: EntryView(store: self.store.scope(
+                            state: { $0.detailState },
+                            action: EntriesListAction.entry)
                     ), isActive: viewStore.binding(
                         get: { $0.showsAddEntry },
                         send: EntriesListAction.showAddEntry
                     )) {
                         Text("Add")
                     })
+                .navigationBarItems(leading:
+                    Button(action: {
+                        viewStore.send(.loadingTriggered)
+                    }, label: {
+                        Text("Load")
+                    })
+                )
             }
         }
     }

@@ -28,17 +28,8 @@ EntriesListEnviornment>.combine(
                     }
             case .setNavigation(let entry):
                 if let newEntry = entry {
-                    let tagState = EntryTagState(tags: entry?.tags ?? [])
-                    let imagesState = EntryImagesState(images: entry?.images ?? [])
-
-                    let entryState = EntryState(entry: entry,
-                                                title: newEntry.title,
-                                                body: entry?.bodyText ?? "",
-                                                date: entry?.date ?? Date(),
-                                                currentLocation: entry?.location,
-                                                weather: entry?.weather,
-                                                entryTagState: tagState,
-                                                entryImagesState: imagesState, locationSearchViewState: LocationSearchViewState())
+                    let entryState = EntryState.from(entry: newEntry)
+                    state.detailState = entryState
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil
@@ -46,19 +37,7 @@ EntriesListEnviornment>.combine(
 
                 return .none
             case .showAddEntry(let value):
-                let tagState = EntryTagState(tags: [])
-                let imageState = EntryImagesState(images: [])
-
-                let entryState = EntryState(entry: nil,
-                                            title: "",
-                                            body: "",
-                                            date: Date(),
-                                            currentLocation: nil,
-                                            weather: nil,
-                                            entryTagState: tagState,
-                                            entryImagesState: imageState, locationSearchViewState: LocationSearchViewState())
-
-                state.newEntryState = entryState
+                state.detailState = EntryState.empty()
                 state.showsAddEntry = value
 
                 return .none
@@ -67,20 +46,11 @@ EntriesListEnviornment>.combine(
         }
     },
     entryReducer
-        .pullback(state: \Identified.value, action: .self, environment: { $0 })
-        .optional
         .pullback(
-            state: \EntriesListState.selection,
+            state: \EntriesListState.detailState,
             action: /EntriesListAction.entry,
             environment: {
                 $0.entryEnviornment
         }
-    ),
-    entryReducer
-        .optional
-        .pullback(state: \EntriesListState.newEntryState,
-                  action: /EntriesListAction.entry,
-                  environment: {
-                    $0.entryEnviornment
-    })
+    )
 )
