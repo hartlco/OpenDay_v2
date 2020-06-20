@@ -1,3 +1,5 @@
 import Foundation
 
-struct MapViewEnviornment { }
+struct MapViewEnviornment {
+    let entryEnviornment: EntryEnviornment
+}

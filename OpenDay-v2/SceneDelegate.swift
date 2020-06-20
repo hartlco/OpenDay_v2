@@ -3,6 +3,7 @@ import SwiftUI
 import OpenDayService
 import ComposableArchitecture
 import LocationService
+import WeatherService
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -17,12 +18,19 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                             client: URLSession.shared)
         let queue = DispatchQueue.main.eraseToAnyScheduler()
 
+        let entryEnviornment = EntryEnviornment(service: openDayService,
+                                                mainQueue: queue,
+                                                locationService: locationService,
+                                                weatherService: WeatherService(key: Secrets.weatherServiceSecret))
+
         let entriesEnviornment = EntriesListEnviornment(service: openDayService,
-                                                 mainQueue: queue,
-                                                 locationServcie: locationService)
+                                                        mainQueue: queue,
+                                                        entryEnviornment: entryEnviornment)
+
+        let mapEnviornment = MapViewEnviornment(entryEnviornment: entryEnviornment)
 
         let tabEnviornment = TabEnviornment(entriesListEnviornment: entriesEnviornment,
-                                            mapViewEnviornment: MapViewEnviornment())
+                                            mapViewEnviornment: mapEnviornment)
         let tabView = TabView(store: Store(initialState: TabState(),
                                            reducer: tabReducer.debug(),
                                            environment: tabEnviornment))

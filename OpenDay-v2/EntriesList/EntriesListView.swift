@@ -40,7 +40,14 @@ struct EntriesListView: View {
                     }
                 }
                 .navigationBarTitle("Entries")
-                .navigationBarItems(trailing:
+                .navigationBarItems(
+                    leading:
+                    Button(action: {
+                        viewStore.send(.loadingTriggered)
+                    }, label: {
+                        Text("Load")
+                    }),
+                    trailing:
                     NavigationLink(
                         destination: EntryView(store: self.store.scope(
                             state: { $0.detailState },
@@ -51,13 +58,6 @@ struct EntriesListView: View {
                     )) {
                         Text("Add")
                     })
-                .navigationBarItems(leading:
-                    Button(action: {
-                        viewStore.send(.loadingTriggered)
-                    }, label: {
-                        Text("Load")
-                    })
-                )
             }
         }
     }

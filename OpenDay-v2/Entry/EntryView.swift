@@ -58,7 +58,7 @@ struct EntryView: View {
                 )
                 Section {
                     viewStore.currentLocation.map {
-                        Text($0.city ?? "")
+                        Text($0.localizedString())
                     }
                     Button(
                         action: {
