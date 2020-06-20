@@ -43,6 +43,10 @@ Reducer { state, action, enviornment in
             .receive(on: enviornment.mainQueue)
             .catchToEffect()
             .map(EntryAction.currentLocationChanged)
+    case .showsLocationSearchView(let value):
+        state.showsLocationSearchView = value
+
+        return .none
     case .currentLocationChanged(let result):
         switch result {
         case .success(let location):
@@ -90,6 +94,15 @@ Reducer { state, action, enviornment in
         default:
             return .none
         }
+    case .locationSearchAction(let action):
+        switch action {
+        case .selectLocation(let location):
+            state.currentLocation = location
+
+            return .none
+        default:
+            return .none
+        }
     }
 },
 entryTagReducer.pullback(state: \EntryState.entryTagState,
@@ -102,5 +115,10 @@ entryImagesReducer.pullback(state: \EntryState.entryImagesState,
                             action: /EntryAction.imageAction,
                             environment: { _ in
                                 EntryImagesEnviornment()
+}),
+locationSearchViewReducer.pullback(state: \EntryState.locationSearchViewState,
+                                   action: /EntryAction.locationSearchAction,
+                                   environment: { enviornment in
+                                    enviornment.locationSearchEnviornment
 })
 )

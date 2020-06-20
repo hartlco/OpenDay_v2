@@ -12,6 +12,9 @@ struct EntryState: Equatable {
     var currentLocation: Location?
     var weather: Weather?
 
+    var showsLocationSearchView = false
+
     var entryTagState: EntryTagState
     var entryImagesState: EntryImagesState
+    var locationSearchViewState: LocationSearchViewState
 }

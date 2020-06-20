@@ -38,7 +38,7 @@ EntriesListEnviornment>.combine(
                                                 currentLocation: entry?.location,
                                                 weather: entry?.weather,
                                                 entryTagState: tagState,
-                                                entryImagesState: imagesState)
+                                                entryImagesState: imagesState, locationSearchViewState: LocationSearchViewState())
                     state.selection = Identified(entryState, id: newEntry)
                 } else {
                     state.selection = nil
@@ -56,7 +56,7 @@ EntriesListEnviornment>.combine(
                                             currentLocation: nil,
                                             weather: nil,
                                             entryTagState: tagState,
-                                            entryImagesState: imageState)
+                                            entryImagesState: imageState, locationSearchViewState: LocationSearchViewState())
 
                 state.newEntryState = entryState
                 state.showsAddEntry = value

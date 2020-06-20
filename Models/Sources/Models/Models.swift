@@ -158,7 +158,7 @@ public struct Location: Codable, Identifiable, Equatable {
     public let city: String?
     public let name: String?
 
-    public func localizedString(from locale: Locale) -> String {
+    public func localizedString(from locale: Locale = .current) -> String {
         let values = [
             name,
             city,

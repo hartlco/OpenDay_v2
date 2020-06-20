@@ -43,21 +43,14 @@ struct EntryView: View {
                     }
                     DatePicker(
                         selection: viewStore.binding(
-                        get: { $0.date },
-                        send: EntryAction.updateDate(date:)
+                            get: { $0.date },
+                            send: EntryAction.updateDate(date:)
                         ),
                         in: Date(timeIntervalSince1970: 0)...,
                         displayedComponents: .hourAndMinute
                     ) {
                             Text("Time")
                     }
-                }
-                Section {
-                    Button(action: {
-                        viewStore.send(.updateEntryIfNeeded)
-                    }, label: {
-                        Text("Update")
-                    })
                 }
                 EntryImagesView(store: self.store.scope(
                     state: { $0.entryImagesState },
@@ -73,6 +66,11 @@ struct EntryView: View {
                     }, label: {
                         Text("Load current location")
                     })
+                    LocationSearchView(
+                        store: self.store.scope(
+                            state: { $0.locationSearchViewState },
+                            action: EntryAction.locationSearchAction)
+                    )
                 }
                 Section {
                     viewStore.weather.map {
@@ -86,6 +84,13 @@ struct EntryView: View {
                 )
             }
             .listStyle(GroupedListStyle())
+            .navigationBarItems(trailing:
+                Button(
+                action: {
+                    viewStore.send(.updateEntryIfNeeded)
+                }, label: {
+                    Text("Save")
+                }))
             .navigationBarTitle("Entry")
         }
     }

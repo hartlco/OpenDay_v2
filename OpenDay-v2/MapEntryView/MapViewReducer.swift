@@ -12,6 +12,7 @@ let mapViewReducer = Reducer<MapViewState, MapViewAction, MapViewEnviornment> { 
 
         let tagState = EntryTagState(tags: entry.tags ?? [])
         let imagesState = EntryImagesState(images: entry.images)
+        let locationSearchViewState = LocationSearchViewState()
 
         let entryState = EntryState(entry: entry,
                                title: entry.title,
@@ -20,7 +21,8 @@ let mapViewReducer = Reducer<MapViewState, MapViewAction, MapViewEnviornment> { 
                                currentLocation: entry.location,
                                weather: entry.weather,
                                entryTagState: tagState,
-                               entryImagesState: imagesState)
+                               entryImagesState: imagesState,
+                               locationSearchViewState: locationSearchViewState)
         state.detailEntryState = entryState
         state.showsDetail = true
         return .none
