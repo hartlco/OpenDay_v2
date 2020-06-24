@@ -1,6 +1,7 @@
 import SwiftUI
 import ComposableArchitecture
 import MapView
+import MapKit
 
 struct MapEntryView: View {
     let store: Store<MapViewState, MapViewAction>
