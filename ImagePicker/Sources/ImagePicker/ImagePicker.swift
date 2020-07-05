@@ -1,5 +1,6 @@
 import SwiftUI
 import Photos
+import PhotosUI
 import CoreLocation
 
 struct ImagePickerViewController: UIViewControllerRepresentable {
@@ -8,11 +9,11 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
     var imagePicked: ((UIImage, CLLocation?, Date?) -> Void)?
 
     //swiftlint:disable line_length
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerViewController>) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        imagePicker.allowsEditing = false
-        imagePicker.delegate = context.coordinator
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerViewController>) -> PHPickerViewController {
+        let photoLibrary = PHPhotoLibrary.shared()
+        let configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = context.coordinator
 
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .notDetermined {
@@ -21,10 +22,10 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
             }
         }
 
-        return imagePicker
+        return picker
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController,
+    func updateUIViewController(_ uiViewController: PHPickerViewController,
                                 context: UIViewControllerRepresentableContext<ImagePickerViewController>) {
     }
 
@@ -32,28 +33,24 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
         return Coordinator(self)
     }
 
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    class Coordinator: NSObject, PHPickerViewControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePickerViewController
 
         init(_ parent: ImagePickerViewController) {
             self.parent = parent
         }
 
-        func imagePickerController(_ picker: UIImagePickerController,
-                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            guard let asset = info[.phAsset] as? PHAsset else {
+        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            let identifiers = results.compactMap(\.assetIdentifier)
+            let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+            guard let asset = fetchResult.firstObject else {
+                picker.dismiss(animated: true, completion: nil)
                 return
             }
 
             let image = asset.image
 
             parent.imagePicked?(image, asset.location, asset.creationDate)
-            picker.dismiss(animated: true, completion: nil)
-        }
-
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            parent.presentationMode.dismiss()
             picker.dismiss(animated: true, completion: nil)
         }
     }

@@ -39,25 +39,28 @@ struct EntriesListView: View {
                         }
                     }
                 }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            viewStore.send(.loadingTriggered)
+                        }, label: {
+                            Text("Load")
+                        })
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(
+                            destination: EntryView(store: self.store.scope(
+                                state: { $0.detailState },
+                                action: EntriesListAction.entry)
+                        ), isActive: viewStore.binding(
+                            get: { $0.showsAddEntry },
+                            send: EntriesListAction.showAddEntry
+                        )) {
+                            Text("Add")
+                        }
+                    }
+                }
                 .navigationBarTitle("Entries")
-                .navigationBarItems(
-                    leading:
-                    Button(action: {
-                        viewStore.send(.loadingTriggered)
-                    }, label: {
-                        Text("Load")
-                    }),
-                    trailing:
-                    NavigationLink(
-                        destination: EntryView(store: self.store.scope(
-                            state: { $0.detailState },
-                            action: EntriesListAction.entry)
-                    ), isActive: viewStore.binding(
-                        get: { $0.showsAddEntry },
-                        send: EntriesListAction.showAddEntry
-                    )) {
-                        Text("Add")
-                    })
             }
         }
     }

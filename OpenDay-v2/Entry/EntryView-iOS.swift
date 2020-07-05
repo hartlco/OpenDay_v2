@@ -1,13 +1,10 @@
 import Foundation
 import ComposableArchitecture
 import SwiftUI
-import TextView
 import KingfisherSwiftUI
 
 struct EntryView: View {
     let store: Store<EntryState, EntryAction>
-
-    @State private var bodyHeight: CGFloat = 40
 
     var body: some View {
         WithViewStore(store) { viewStore in
@@ -20,15 +17,13 @@ struct EntryView: View {
                         send: EntryAction.updateTitle(text:)
                         )
                     )
-                    ExpandingTextView(
-                        placeholder: "Body",
-                        text: viewStore.binding(
+                    ZStack {
+                        TextEditor(text: viewStore.binding(
                             get: { $0.body },
                             send: EntryAction.updateBody(text:)
-                        ),
-                        minHeight: self.bodyHeight,
-                        calculatedHeight: self.$bodyHeight
-                    )
+                        ))
+                        Text(viewStore.body).opacity(0).padding(.all, 8)
+                    }
                 }
                 Section(header: Text("Date")) {
                     DatePicker(

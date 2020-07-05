@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C502DF1024AEE5C800B00008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C502DF0F24AEE5C800B00008 /* Assets.xcassets */; };
+		C502DF1324AEE5C800B00008 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C502DF1224AEE5C800B00008 /* Preview Assets.xcassets */; };
+		C502DF1924AEE6A800B00008 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF3D5B24A3E8AB00B35D20 /* App.swift */; };
+		C502DF1A24AEE6AE00B00008 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8EB2476C95500B3DE31 /* Secrets.swift */; };
+		C502DF1B24AEE6B400B00008 /* ImageResource+KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F22477CB2600B3DE31 /* ImageResource+KFImage.swift */; };
+		C502DF1C24AEE6BA00B00008 /* EntriesListEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D824690A670009886C /* EntriesListEnviornment.swift */; };
+		C502DF1D24AEE6BA00B00008 /* EntriesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DA24690ABA0009886C /* EntriesListReducer.swift */; };
+		C502DF1E24AEE6BA00B00008 /* EntriesListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D6246909E90009886C /* EntriesListAction.swift */; };
+		C502DF1F24AEE6BA00B00008 /* EntriesListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D42469092F0009886C /* EntriesListState.swift */; };
+		C502DF2124AEE6BA00B00008 /* OpenDayService+Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DE24690F220009886C /* OpenDayService+Effect.swift */; };
+		C502DF2224AEE6C200B00008 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
+		C502DF2324AEE6C200B00008 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
+		C502DF2524AEE6C200B00008 /* EntryEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51E535F2475110B00AE653A /* EntryEnviornment.swift */; };
+		C502DF2624AEE6C200B00008 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
+		C502DF2724AEE6C900B00008 /* EntryTagAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931222495E66F00D1864D /* EntryTagAction.swift */; };
+		C502DF2824AEE6C900B00008 /* EntryTagEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931242495E6A800D1864D /* EntryTagEnviornment.swift */; };
+		C502DF2924AEE6C900B00008 /* EntryTagReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931262495E6BF00D1864D /* EntryTagReducer.swift */; };
+		C502DF2A24AEE6C900B00008 /* EntryTagState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931202495E62100D1864D /* EntryTagState.swift */; };
+		C502DF2C24AEE6CE00B00008 /* EntryImagesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569312B2496157E00D1864D /* EntryImagesAction.swift */; };
+		C502DF2D24AEE6CE00B00008 /* EntryImagesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693129249611DD00D1864D /* EntryImagesState.swift */; };
+		C502DF2E24AEE6CE00B00008 /* EntryImagesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569312D2496167900D1864D /* EntryImagesReducer.swift */; };
+		C502DF2F24AEE6CE00B00008 /* EntryImageEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569312F249616A400D1864D /* EntryImageEnviornment.swift */; };
+		C502DF3124AEE6D500B00008 /* LocationSearchViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569314824988DF000D1864D /* LocationSearchViewReducer.swift */; };
+		C502DF3224AEE6D500B00008 /* LocationSearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569314224988AC000D1864D /* LocationSearchViewState.swift */; };
+		C502DF3424AEE6D500B00008 /* LocationSearchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569314424988B0100D1864D /* LocationSearchAction.swift */; };
+		C502DF3524AEE6D500B00008 /* LocationSearchViewEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569314624988DDA00D1864D /* LocationSearchViewEnviornment.swift */; };
+		C502DF3624AEE6EB00B00008 /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8F8247982A800B3DE31 /* TabState.swift */; };
+		C502DF3724AEE6EB00B00008 /* TabReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FC2479837900B3DE31 /* TabReducer.swift */; };
+		C502DF3924AEE6EB00B00008 /* TabEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */; };
+		C502DF3A24AEE6EB00B00008 /* TabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FA2479835C00B3DE31 /* TabAction.swift */; };
+		C502DF3C24AEE6F100B00008 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931342496917000D1864D /* MapViewState.swift */; };
+		C502DF3D24AEE6F100B00008 /* MapViewEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569313A249698AC00D1864D /* MapViewEnviornment.swift */; };
+		C502DF3E24AEE6F100B00008 /* MapViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693136249691DC00D1864D /* MapViewAction.swift */; };
+		C502DF3F24AEE6F100B00008 /* MapViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931382496989800D1864D /* MapViewReducer.swift */; };
+		C502DF4324AEE71E00B00008 /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4224AEE71E00B00008 /* LocationService */; };
+		C502DF4524AEE71E00B00008 /* MapView in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4424AEE71E00B00008 /* MapView */; };
+		C502DF4724AEE71E00B00008 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4624AEE71E00B00008 /* Models */; };
+		C502DF4924AEE71E00B00008 /* OpenDayService in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4824AEE71E00B00008 /* OpenDayService */; };
+		C502DF4D24AEE71E00B00008 /* WeatherService in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4C24AEE71E00B00008 /* WeatherService */; };
+		C502DF4F24AEE71E00B00008 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF4E24AEE71E00B00008 /* ComposableArchitecture */; };
+		C502DF5124AEE71E00B00008 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF5024AEE71E00B00008 /* Kingfisher */; };
+		C502DF5324AEE71E00B00008 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C502DF5224AEE71E00B00008 /* KingfisherSwiftUI */; };
+		C502DF5524AEE8E400B00008 /* TabView-macos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF5424AEE8E400B00008 /* TabView-macos.swift */; };
+		C502DF5724AEE98D00B00008 /* AppKit-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF5624AEE98D00B00008 /* AppKit-Extension.swift */; };
+		C502DF7624AF025900B00008 /* EntryTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569311E2495E5BB00D1864D /* EntryTagView.swift */; };
+		C502DF7824AF02CA00B00008 /* EntriesListView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF7724AF02CA00B00008 /* EntriesListView-macOS.swift */; };
+		C502DF7A24AF032900B00008 /* EntryView-macos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502DF7924AF032900B00008 /* EntryView-macos.swift */; };
+		C502DF7B24B18FAB00B00008 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569314A24988E5600D1864D /* LocationSearchView.swift */; };
+		C502DF7C24B18FD900B00008 /* EntryImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693131249629B200D1864D /* EntryImagesView.swift */; };
 		C50B22B92469074C0009886C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22B82469074C0009886C /* Assets.xcassets */; };
 		C50B22BC2469074C0009886C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BB2469074C0009886C /* Preview Assets.xcassets */; };
 		C50B22BF2469074C0009886C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50B22BD2469074C0009886C /* LaunchScreen.storyboard */; };
@@ -16,12 +65,11 @@
 		C50B22D7246909E90009886C /* EntriesListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D6246909E90009886C /* EntriesListAction.swift */; };
 		C50B22D924690A670009886C /* EntriesListEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22D824690A670009886C /* EntriesListEnviornment.swift */; };
 		C50B22DB24690ABA0009886C /* EntriesListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DA24690ABA0009886C /* EntriesListReducer.swift */; };
-		C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DC24690C4C0009886C /* EntriesListView.swift */; };
+		C50B22DD24690C4C0009886C /* EntriesListView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DC24690C4C0009886C /* EntriesListView-iOS.swift */; };
 		C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B22DE24690F220009886C /* OpenDayService+Effect.swift */; };
 		C51E535E247510D600AE653A /* LocationService in Frameworks */ = {isa = PBXBuildFile; productRef = C51E535D247510D600AE653A /* LocationService */; };
 		C51E53602475110B00AE653A /* EntryEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51E535F2475110B00AE653A /* EntryEnviornment.swift */; };
 		C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8BE24757D2100D0B5FC /* ComposableArchitecture */; };
-		C548C8C22476448200D0B5FC /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = C548C8C12476448200D0B5FC /* TextView */; };
 		C569311F2495E5BB00D1864D /* EntryTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569311E2495E5BB00D1864D /* EntryTagView.swift */; };
 		C56931212495E62100D1864D /* EntryTagState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931202495E62100D1864D /* EntryTagState.swift */; };
 		C56931232495E66F00D1864D /* EntryTagAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56931222495E66F00D1864D /* EntryTagAction.swift */; };
@@ -46,7 +94,7 @@
 		C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D2F2471D02D0058FE07 /* EntryState.swift */; };
 		C56E3D322471D0CF0058FE07 /* EntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D312471D0CF0058FE07 /* EntryAction.swift */; };
 		C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D332471D2630058FE07 /* EntryReducer.swift */; };
-		C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D352471D2A90058FE07 /* EntryView.swift */; };
+		C56E3D362471D2A90058FE07 /* EntryView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E3D352471D2A90058FE07 /* EntryView-iOS.swift */; };
 		C5BF3D5C24A3E8AB00B35D20 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF3D5B24A3E8AB00B35D20 /* App.swift */; };
 		C5CAD8EA2476C72700B3DE31 /* WeatherService in Frameworks */ = {isa = PBXBuildFile; productRef = C5CAD8E92476C72700B3DE31 /* WeatherService */; };
 		C5CAD8EC2476C95500B3DE31 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8EB2476C95500B3DE31 /* Secrets.swift */; };
@@ -58,7 +106,7 @@
 		C5CAD8FB2479835C00B3DE31 /* TabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FA2479835C00B3DE31 /* TabAction.swift */; };
 		C5CAD8FD2479837900B3DE31 /* TabReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FC2479837900B3DE31 /* TabReducer.swift */; };
 		C5CAD8FF2479839900B3DE31 /* TabEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */; };
-		C5CAD9012479840300B3DE31 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD9002479840300B3DE31 /* TabView.swift */; };
+		C5CAD9012479840300B3DE31 /* TabView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAD9002479840300B3DE31 /* TabView-iOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +123,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C502DF0924AEE5C700B00008 /* OpenDay-Mac-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenDay-Mac-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C502DF0F24AEE5C800B00008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C502DF1224AEE5C800B00008 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C502DF1424AEE5C800B00008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C502DF1524AEE5C800B00008 /* OpenDay_Mac_v2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenDay_Mac_v2.entitlements; sourceTree = "<group>"; };
+		C502DF5424AEE8E400B00008 /* TabView-macos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView-macos.swift"; sourceTree = "<group>"; };
+		C502DF5624AEE98D00B00008 /* AppKit-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppKit-Extension.swift"; sourceTree = "<group>"; };
+		C502DF7724AF02CA00B00008 /* EntriesListView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntriesListView-macOS.swift"; sourceTree = "<group>"; };
+		C502DF7924AF032900B00008 /* EntryView-macos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryView-macos.swift"; sourceTree = "<group>"; };
 		C50B22AF2469074B0009886C /* OpenDay-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenDay-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50B22B82469074C0009886C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50B22BB2469074C0009886C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,7 +141,7 @@
 		C50B22D6246909E90009886C /* EntriesListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListAction.swift; sourceTree = "<group>"; };
 		C50B22D824690A670009886C /* EntriesListEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListEnviornment.swift; sourceTree = "<group>"; };
 		C50B22DA24690ABA0009886C /* EntriesListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListReducer.swift; sourceTree = "<group>"; };
-		C50B22DC24690C4C0009886C /* EntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListView.swift; sourceTree = "<group>"; };
+		C50B22DC24690C4C0009886C /* EntriesListView-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntriesListView-iOS.swift"; sourceTree = "<group>"; };
 		C50B22DE24690F220009886C /* OpenDayService+Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDayService+Effect.swift"; sourceTree = "<group>"; };
 		C51E535F2475110B00AE653A /* EntryEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEnviornment.swift; sourceTree = "<group>"; };
 		C569311E2495E5BB00D1864D /* EntryTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTagView.swift; sourceTree = "<group>"; };
@@ -111,11 +168,10 @@
 		C56E3D2F2471D02D0058FE07 /* EntryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryState.swift; sourceTree = "<group>"; };
 		C56E3D312471D0CF0058FE07 /* EntryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAction.swift; sourceTree = "<group>"; };
 		C56E3D332471D2630058FE07 /* EntryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReducer.swift; sourceTree = "<group>"; };
-		C56E3D352471D2A90058FE07 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		C56E3D352471D2A90058FE07 /* EntryView-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryView-iOS.swift"; sourceTree = "<group>"; };
 		C5BF3D5B24A3E8AB00B35D20 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C5C9AC5424764A2300BB49D8 /* LocationService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LocationService; sourceTree = "<group>"; };
 		C5C9AC5524764A2300BB49D8 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		C5C9AC5624764A2300BB49D8 /* TextView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TextView; sourceTree = "<group>"; };
 		C5C9AC5724764A2400BB49D8 /* OpenDayService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenDayService; sourceTree = "<group>"; };
 		C5CAD8E82476C71300B3DE31 /* WeatherService */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherService; sourceTree = "<group>"; };
 		C5CAD8EB2476C95500B3DE31 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
@@ -125,10 +181,25 @@
 		C5CAD8FA2479835C00B3DE31 /* TabAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAction.swift; sourceTree = "<group>"; };
 		C5CAD8FC2479837900B3DE31 /* TabReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabReducer.swift; sourceTree = "<group>"; };
 		C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnviornment.swift; sourceTree = "<group>"; };
-		C5CAD9002479840300B3DE31 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		C5CAD9002479840300B3DE31 /* TabView-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView-iOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C502DF0624AEE5C700B00008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C502DF4524AEE71E00B00008 /* MapView in Frameworks */,
+				C502DF4724AEE71E00B00008 /* Models in Frameworks */,
+				C502DF5124AEE71E00B00008 /* Kingfisher in Frameworks */,
+				C502DF5324AEE71E00B00008 /* KingfisherSwiftUI in Frameworks */,
+				C502DF4924AEE71E00B00008 /* OpenDayService in Frameworks */,
+				C502DF4324AEE71E00B00008 /* LocationService in Frameworks */,
+				C502DF4F24AEE71E00B00008 /* ComposableArchitecture in Frameworks */,
+				C502DF4D24AEE71E00B00008 /* WeatherService in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C50B22AC2469074B0009886C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,7 +207,6 @@
 				C50B22D0246908F10009886C /* Models in Frameworks */,
 				C51E535E247510D600AE653A /* LocationService in Frameworks */,
 				C569314024969B5600D1864D /* MapView in Frameworks */,
-				C548C8C22476448200D0B5FC /* TextView in Frameworks */,
 				C5CAD8EA2476C72700B3DE31 /* WeatherService in Frameworks */,
 				C5CAD8F12477A6E100B3DE31 /* Kingfisher in Frameworks */,
 				C548C8BF24757D2100D0B5FC /* ComposableArchitecture in Frameworks */,
@@ -149,6 +219,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C502DF0A24AEE5C700B00008 /* OpenDay-Mac-v2 */ = {
+			isa = PBXGroup;
+			children = (
+				C502DF0F24AEE5C800B00008 /* Assets.xcassets */,
+				C502DF1424AEE5C800B00008 /* Info.plist */,
+				C502DF1524AEE5C800B00008 /* OpenDay_Mac_v2.entitlements */,
+				C502DF1124AEE5C800B00008 /* Preview Content */,
+				C502DF5624AEE98D00B00008 /* AppKit-Extension.swift */,
+			);
+			path = "OpenDay-Mac-v2";
+			sourceTree = "<group>";
+		};
+		C502DF1124AEE5C800B00008 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C502DF1224AEE5C800B00008 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		C50B22A62469074B0009886C = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +248,8 @@
 				C5C9AC5424764A2300BB49D8 /* LocationService */,
 				C5C9AC5524764A2300BB49D8 /* Models */,
 				C5C9AC5724764A2400BB49D8 /* OpenDayService */,
-				C5C9AC5624764A2300BB49D8 /* TextView */,
 				C50B22B12469074B0009886C /* OpenDay-v2 */,
+				C502DF0A24AEE5C700B00008 /* OpenDay-Mac-v2 */,
 				C50B22B02469074B0009886C /* Products */,
 				C50B22CE246908F10009886C /* Frameworks */,
 			);
@@ -169,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				C50B22AF2469074B0009886C /* OpenDay-v2.app */,
+				C502DF0924AEE5C700B00008 /* OpenDay-Mac-v2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,7 +304,8 @@
 				C50B22D6246909E90009886C /* EntriesListAction.swift */,
 				C50B22D824690A670009886C /* EntriesListEnviornment.swift */,
 				C50B22DA24690ABA0009886C /* EntriesListReducer.swift */,
-				C50B22DC24690C4C0009886C /* EntriesListView.swift */,
+				C50B22DC24690C4C0009886C /* EntriesListView-iOS.swift */,
+				C502DF7724AF02CA00B00008 /* EntriesListView-macOS.swift */,
 				C50B22DE24690F220009886C /* OpenDayService+Effect.swift */,
 			);
 			path = EntriesList;
@@ -276,7 +368,8 @@
 				C56E3D2F2471D02D0058FE07 /* EntryState.swift */,
 				C56E3D312471D0CF0058FE07 /* EntryAction.swift */,
 				C56E3D332471D2630058FE07 /* EntryReducer.swift */,
-				C56E3D352471D2A90058FE07 /* EntryView.swift */,
+				C56E3D352471D2A90058FE07 /* EntryView-iOS.swift */,
+				C502DF7924AF032900B00008 /* EntryView-macos.swift */,
 				C51E535F2475110B00AE653A /* EntryEnviornment.swift */,
 			);
 			path = Entry;
@@ -289,7 +382,8 @@
 				C5CAD8FA2479835C00B3DE31 /* TabAction.swift */,
 				C5CAD8FC2479837900B3DE31 /* TabReducer.swift */,
 				C5CAD8FE2479839900B3DE31 /* TabEnviornment.swift */,
-				C5CAD9002479840300B3DE31 /* TabView.swift */,
+				C5CAD9002479840300B3DE31 /* TabView-iOS.swift */,
+				C502DF5424AEE8E400B00008 /* TabView-macos.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -297,6 +391,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C502DF0824AEE5C700B00008 /* OpenDay-Mac-v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C502DF1624AEE5C800B00008 /* Build configuration list for PBXNativeTarget "OpenDay-Mac-v2" */;
+			buildPhases = (
+				C502DF0524AEE5C700B00008 /* Sources */,
+				C502DF0624AEE5C700B00008 /* Frameworks */,
+				C502DF0724AEE5C700B00008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenDay-Mac-v2";
+			packageProductDependencies = (
+				C502DF4224AEE71E00B00008 /* LocationService */,
+				C502DF4424AEE71E00B00008 /* MapView */,
+				C502DF4624AEE71E00B00008 /* Models */,
+				C502DF4824AEE71E00B00008 /* OpenDayService */,
+				C502DF4C24AEE71E00B00008 /* WeatherService */,
+				C502DF4E24AEE71E00B00008 /* ComposableArchitecture */,
+				C502DF5024AEE71E00B00008 /* Kingfisher */,
+				C502DF5224AEE71E00B00008 /* KingfisherSwiftUI */,
+			);
+			productName = "OpenDay-Mac-v2";
+			productReference = C502DF0924AEE5C700B00008 /* OpenDay-Mac-v2.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C50B22AE2469074B0009886C /* OpenDay-v2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C50B22C32469074C0009886C /* Build configuration list for PBXNativeTarget "OpenDay-v2" */;
@@ -317,7 +438,6 @@
 				C50B22D1246908F10009886C /* OpenDayService */,
 				C51E535D247510D600AE653A /* LocationService */,
 				C548C8BE24757D2100D0B5FC /* ComposableArchitecture */,
-				C548C8C12476448200D0B5FC /* TextView */,
 				C5CAD8E92476C72700B3DE31 /* WeatherService */,
 				C5CAD8EE2477A6E100B3DE31 /* KingfisherSwiftUI */,
 				C5CAD8F02477A6E100B3DE31 /* Kingfisher */,
@@ -334,10 +454,13 @@
 		C50B22A72469074B0009886C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = hartl.co;
 				TargetAttributes = {
+					C502DF0824AEE5C700B00008 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					C50B22AE2469074B0009886C = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -361,11 +484,21 @@
 			projectRoot = "";
 			targets = (
 				C50B22AE2469074B0009886C /* OpenDay-v2 */,
+				C502DF0824AEE5C700B00008 /* OpenDay-Mac-v2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C502DF0724AEE5C700B00008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C502DF1324AEE5C800B00008 /* Preview Assets.xcassets in Resources */,
+				C502DF1024AEE5C800B00008 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C50B22AD2469074B0009886C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +533,52 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C502DF0524AEE5C700B00008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C502DF1B24AEE6B400B00008 /* ImageResource+KFImage.swift in Sources */,
+				C502DF2D24AEE6CE00B00008 /* EntryImagesState.swift in Sources */,
+				C502DF2124AEE6BA00B00008 /* OpenDayService+Effect.swift in Sources */,
+				C502DF1D24AEE6BA00B00008 /* EntriesListReducer.swift in Sources */,
+				C502DF3224AEE6D500B00008 /* LocationSearchViewState.swift in Sources */,
+				C502DF3424AEE6D500B00008 /* LocationSearchAction.swift in Sources */,
+				C502DF3A24AEE6EB00B00008 /* TabAction.swift in Sources */,
+				C502DF7A24AF032900B00008 /* EntryView-macos.swift in Sources */,
+				C502DF7624AF025900B00008 /* EntryTagView.swift in Sources */,
+				C502DF2C24AEE6CE00B00008 /* EntryImagesAction.swift in Sources */,
+				C502DF2F24AEE6CE00B00008 /* EntryImageEnviornment.swift in Sources */,
+				C502DF3724AEE6EB00B00008 /* TabReducer.swift in Sources */,
+				C502DF2224AEE6C200B00008 /* EntryState.swift in Sources */,
+				C502DF1924AEE6A800B00008 /* App.swift in Sources */,
+				C502DF1C24AEE6BA00B00008 /* EntriesListEnviornment.swift in Sources */,
+				C502DF2A24AEE6C900B00008 /* EntryTagState.swift in Sources */,
+				C502DF2824AEE6C900B00008 /* EntryTagEnviornment.swift in Sources */,
+				C502DF3624AEE6EB00B00008 /* TabState.swift in Sources */,
+				C502DF1E24AEE6BA00B00008 /* EntriesListAction.swift in Sources */,
+				C502DF2924AEE6C900B00008 /* EntryTagReducer.swift in Sources */,
+				C502DF3124AEE6D500B00008 /* LocationSearchViewReducer.swift in Sources */,
+				C502DF5724AEE98D00B00008 /* AppKit-Extension.swift in Sources */,
+				C502DF5524AEE8E400B00008 /* TabView-macos.swift in Sources */,
+				C502DF1F24AEE6BA00B00008 /* EntriesListState.swift in Sources */,
+				C502DF2624AEE6C200B00008 /* EntryReducer.swift in Sources */,
+				C502DF2324AEE6C200B00008 /* EntryAction.swift in Sources */,
+				C502DF7C24B18FD900B00008 /* EntryImagesView.swift in Sources */,
+				C502DF3C24AEE6F100B00008 /* MapViewState.swift in Sources */,
+				C502DF2524AEE6C200B00008 /* EntryEnviornment.swift in Sources */,
+				C502DF1A24AEE6AE00B00008 /* Secrets.swift in Sources */,
+				C502DF7B24B18FAB00B00008 /* LocationSearchView.swift in Sources */,
+				C502DF3D24AEE6F100B00008 /* MapViewEnviornment.swift in Sources */,
+				C502DF3924AEE6EB00B00008 /* TabEnviornment.swift in Sources */,
+				C502DF2724AEE6C900B00008 /* EntryTagAction.swift in Sources */,
+				C502DF3E24AEE6F100B00008 /* MapViewAction.swift in Sources */,
+				C502DF3524AEE6D500B00008 /* LocationSearchViewEnviornment.swift in Sources */,
+				C502DF2E24AEE6CE00B00008 /* EntryImagesReducer.swift in Sources */,
+				C502DF3F24AEE6F100B00008 /* MapViewReducer.swift in Sources */,
+				C502DF7824AF02CA00B00008 /* EntriesListView-macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C50B22AB2469074B0009886C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,13 +596,13 @@
 				C569313B249698AC00D1864D /* MapViewEnviornment.swift in Sources */,
 				C50B22D52469092F0009886C /* EntriesListState.swift in Sources */,
 				C56931392496989800D1864D /* MapViewReducer.swift in Sources */,
-				C56E3D362471D2A90058FE07 /* EntryView.swift in Sources */,
+				C56E3D362471D2A90058FE07 /* EntryView-iOS.swift in Sources */,
 				C56E3D342471D2630058FE07 /* EntryReducer.swift in Sources */,
 				C50B22DF24690F220009886C /* OpenDayService+Effect.swift in Sources */,
-				C50B22DD24690C4C0009886C /* EntriesListView.swift in Sources */,
+				C50B22DD24690C4C0009886C /* EntriesListView-iOS.swift in Sources */,
 				C5CAD8FB2479835C00B3DE31 /* TabAction.swift in Sources */,
 				C569314324988AC000D1864D /* LocationSearchViewState.swift in Sources */,
-				C5CAD9012479840300B3DE31 /* TabView.swift in Sources */,
+				C5CAD9012479840300B3DE31 /* TabView-iOS.swift in Sources */,
 				C56E3D302471D02D0058FE07 /* EntryState.swift in Sources */,
 				C569311F2495E5BB00D1864D /* EntryTagView.swift in Sources */,
 				C56931272495E6BF00D1864D /* EntryTagReducer.swift in Sources */,
@@ -460,6 +639,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C502DF1724AEE5C800B00008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenDay-Mac-v2/OpenDay_Mac_v2.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"OpenDay-Mac-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = 9E8SXF3Y36;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "OpenDay-Mac-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.hartl.OpenDay-Mac-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C502DF1824AEE5C800B00008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenDay-Mac-v2/OpenDay_Mac_v2.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"OpenDay-Mac-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = 9E8SXF3Y36;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "OpenDay-Mac-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.hartl.OpenDay-Mac-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		C50B22C12469074C0009886C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -619,6 +850,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C502DF1624AEE5C800B00008 /* Build configuration list for PBXNativeTarget "OpenDay-Mac-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C502DF1724AEE5C800B00008 /* Debug */,
+				C502DF1824AEE5C800B00008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C50B22AA2469074B0009886C /* Build configuration list for PBXProject "OpenDay-v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -659,6 +899,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C502DF4224AEE71E00B00008 /* LocationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocationService;
+		};
+		C502DF4424AEE71E00B00008 /* MapView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MapView;
+		};
+		C502DF4624AEE71E00B00008 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		C502DF4824AEE71E00B00008 /* OpenDayService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenDayService;
+		};
+		C502DF4C24AEE71E00B00008 /* WeatherService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatherService;
+		};
+		C502DF4E24AEE71E00B00008 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C50B22C62469077C0009886C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		C502DF5024AEE71E00B00008 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		C502DF5224AEE71E00B00008 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5CAD8ED2477A6E100B3DE31 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
 		C50B22CF246908F10009886C /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
@@ -675,10 +950,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C50B22C62469077C0009886C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		C548C8C12476448200D0B5FC /* TextView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TextView;
 		};
 		C569313F24969B5600D1864D /* MapView */ = {
 			isa = XCSwiftPackageProductDependency;
